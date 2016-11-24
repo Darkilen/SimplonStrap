@@ -1,0 +1,104 @@
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+
+code {
+    padding: 2%;
+    display: block;
+    background: #3F3F3F;
+    color: white;
+    border-radius: 0.4em;
+    white-space:  pre;
+    font-size: 0.8vw;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+	  height:100%;
+}
+
+section p {
+  text-align: center;
+}
+
+hr {
+  margin:2% auto;
+  width: 50%;
+}
+
+footer {
+  padding:2%;
+  background: #dedede;
+}
+
+footer section {
+  padding: 1%;
+  width: 33%;
+}
+
+footer p {
+    text-align: center;
+}
+
+/*** Titles Structures Styles ***/
+
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+/* Ancre */
+
+#gotop {
+	position:fixed;
+	bottom:0.5em;
+	right:1em;
+	font-weight:bold;
+	font-size:2em;
+	color:pink;
+}
+
+/* Divers */
+
+.colnorm {
+  margin: 1%;
+}
+
+.containbtn {
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 800px) {
+  .containflex {
+    flex-direction: column;
+  }
+  code {
+    font-size: 1vh;
+  }
+  .input {
+    width:110px;
+  }
+  footer section {
+    display: none;
+  }
+}

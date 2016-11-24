@@ -1,0 +1,644 @@
+/* -----------------------------------------------Reset User Agent */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    /* Reintialise all margin*/
+    padding: 0;
+    /* Reintialise all padding*/
+    list-style-type: none;
+    /* Delete Bullet on list */
+    text-decoration: none;
+    /* Delete Underline on Link */
+    box-sizing: border-box;
+    /* Padding and Border include in box size */
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* -----------------------------------------------Helper Class */
+
+
+/*** Positions ***/
+
+.porel {
+    position: relative;
+}
+
+.poabs {
+    position: absolute;
+}
+
+.pofix {
+    position: fixed;
+}
+
+.postat {
+    position: static;
+}
+
+.pofixup {
+    position: fixed;
+    top: 0;
+}
+
+.pofixdown {
+    position: fixed;
+    bottom: 0;
+}
+
+.poabsdl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.poabsdr {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.poabsul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.poabsur {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/*** Display ***/
+
+.dblock {
+    display: block;
+}
+
+.dinblock {
+    display: inline-block;
+}
+
+.dflex {
+    display: flex;
+}
+
+.dflexcenter {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*** Float ***/
+
+.floatr {
+    float: right;
+}
+
+.floatl {
+    float: left;
+}
+
+.floatn {
+    float: none;
+}
+
+.floatfix {
+    clear: both;
+}
+
+/*** Flex properties ***/
+.dflex {
+  display:flex;
+}
+
+.dflexcenter {
+  display:flex;
+  justify-content:center;
+}
+
+.dflexsp-b {
+  display:flex;
+  justify-content:space-between;
+}
+
+.dflex-a {
+  display:flex;
+  justify-content:space-around;
+}
+
+
+/*** Hide Elements ***/
+
+.dnone {
+    /* full Hide elements */
+    display: none;
+}
+
+.visuallyhidden {
+    /* elements still visible by DOM but not by User*/
+    position: absolute;
+    top: -999px;
+    left: -9999px;
+}
+
+.visibhidden {
+    /* hide content but space location still visible*/
+    visibility: hidden;
+}
+
+
+/*** Overflow ***/
+
+.overhidden {
+    overflow: hidden;
+}
+
+
+/*** Center elements ***/
+.centerm {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centert {
+  text-align:center;
+}
+
+/*** Border Radius ***/
+.border-radius {
+  border-radius:0.4em;
+}
+
+/*** Defaults Colors & background ***/
+.color {
+  color: blue;
+}
+
+.bg {
+  background: #dedede;
+}
+
+
+/* -----------------------------------------------General Styles */
+
+
+code {
+    display: block;
+    background: #3F3F3F;
+    color: white;
+}
+
+
+/*** Titles Structures Styles ***/
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+
+/*** Link Structures Styles ***/
+
+a {}
+
+a:hover {}
+
+a:focus {}
+
+a:active {}
+
+a:visited {}
+
+
+/* -----------------------------------------------Navigation Bar */
+
+
+/*** List General Styles ***/
+
+ul li {}
+
+ul {}
+
+ol {}
+
+
+/*** Nav ***/
+
+
+/** NAV BAR Instructions
+    * The text will be transformed in Uppercase and aligned center,
+    * There'll be 3 sizes to choosefrom,
+    * Display flex for the direction of the nav (horizontal or vertical)
+
+    $ Made by @ryderblack
+   */
+
+
+/* Horizontal nav bar with 3 sizes */
+
+.nav-landscape-L {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.nav-landscape-M {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+.nav-landscape-S {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+
+/** Horizontal nav bar with 3 sizes */
+
+.nav-portrait-L {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-portrait-M {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.nav-portrait-S {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+/* Navigation Bar*/
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0.3em;
+    background: white;
+}
+
+.nav ul {
+    padding: 2% 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    display: inline-block;
+    padding: 0 1%;
+    background: pink;
+    border: 2px solid pink;
+    border-radius: 0.3em;
+    color: white;
+    font-weight: bold;
+}
+
+.nav ul li a:hover, .nav ul li a:focus, .nav ul li a:active {
+    color: pink;
+    display: inline-block;
+    padding: 0 1%;
+    background: white;
+    border: 2px solid #dedede;
+    border-radius: 0.3em;
+}
+
+#navico a{
+	color:pink;
+}
+
+#navico a:hover, #navico a:focus, #navico a:active {
+    color: deeppink;
+}
+
+
+/* Navigation Bar Media Queries*/
+
+@media screen and (min-width:868px){
+	#navico {
+	display:none;
+	}
+}
+
+
+
+@media screen and (max-width: 867px) {
+	#navico {
+		display:static;
+		width:100%;
+		font-size:2.5em;
+		color: pink;
+	}
+
+	.nav ul li a{
+		display:none;
+	}
+
+	.nav:hover li a{
+		display: block;
+		width:100%;
+		height:50px;
+		line-height:50px;
+	}
+}
+
+
+/* -----------------------------------------------Grid */
+
+.containflex {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.colnorm {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.coltiny {
+    flex: 0.5;
+    box-sizing: border-box;
+}
+
+.colmedium {
+    flex: 2;
+    box-sizing: border-box;
+}
+
+.colbig {
+    flex: 4;
+    box-sizing: border-box;
+}
+
+.colflexnorm {
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.colflextiny {
+    display: flex;
+    flex: 0.5;
+    box-sizing: border-box;
+}
+
+.colflexmedium {
+    display: flex;
+    flex: 2;
+    box-sizing: border-box;
+}
+
+.colflexbig {
+    display: flex;
+    flex: 4;
+    box-sizing: border-box;
+}
+
+
+/* -----------------------------------------------Form */
+
+.form {
+    margin: 5px 10%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    font-family: serif;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+
+.form label {
+    display: inline-block;
+    min-width: 25%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form fieldset {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    padding: 5%;
+}
+
+.form legend {
+    font-style: italic;
+    text-align: left;
+}
+
+.form input {
+    border-radius: 3px;
+    margin: 1% 0px;
+    width: 40%;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+.form input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin: 5px 5px;
+}
+
+.form input:focus {
+    transition: 0.5s;
+}
+
+.form textarea {
+    width: 40%;
+    height: 10vh;
+    margin: 5px;
+}
+
+.form select {
+    border: 1px solid #CCCCCC;
+    padding: 5px;
+    width: 40%;
+}
+
+.form button {
+    padding: 8px 0px;
+    width: 100px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    background: radial-gradient(#98FB98, #32CD32);
+    cursor: pointer;
+}
+
+.form button:active {
+    box-shadow: inset 1px 1px 5px grey;
+}
+
+.form button:focus {
+    outline: none;
+}
+
+.form .question {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* -----------------------------------------------Tableaux */
+
+.table {
+    background: #EEEEEE;
+    border-collapse: separate;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    font-size: 0.9em;
+    margin: auto;
+    text-align: left;
+    width: 80%;
+}
+
+.table th {
+    background: linear-gradient(#777, #444);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.table td {
+    border: 1px solid #fff;
+    padding: 10px 15px;
+}
+
+.table tbody tr td:first-child {
+    font-weight: bold;
+}
+
+
+/* -----------------------------------------------Tableaux */
+
+.table {
+    background: #EEEEEE;
+    border-collapse: separate;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    font-size: 0.9em;
+    margin: auto;
+    text-align: left;
+    width: 80%;
+}
+
+.table th {
+    background: linear-gradient(#777, #444);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.table td {
+    border: 1px solid #fff;
+    padding: 10px 15px;
+}
+
+.table tbody tr td:first-child {
+    font-weight: bold;
+}
+
+
+/* -----------------------------------------------Buttons */
+
+.btn {
+    padding: 8px 0px;
+    width: 100px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    background: radial-gradient(#EEEEEE, #CCCCCC);
+    cursor: pointer;
+}
+
+.btn.vld {
+    background: radial-gradient(#98FB98, #32CD32);
+}
+
+.btn.anl {
+    background: radial-gradient(#FF0000, #CF0A1D);
+}
+
+.btn:active {
+    box-shadow: inset 1px 1px 5px grey;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+
+/* -----------------------------------------------Media Queries */
+
+@media screen and (max-width: 800px) {
+
+    /*------------------------------------------------Form*/
+    .form {
+        margin: 0;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .form label {
+        min-width: 45%;
+        margin-bottom: 10px;
+        font-size: 0.8em;
+    }
+    .form input {
+        width: 45%;
+        padding: 10px;
+        font-size: 0.6em;
+    }
+    .form input[type="radio"], input[type="checkbox"] {
+        width: 20%;
+        display: block;
+        position: relative;
+        top: 15px;
+        left: 5%;
+        margin: 0;
+    }
+    .form select {
+        width: 45%;
+    }
+    .form button {
+        padding: 10px;
+    }
+    /*------------------------------------------------Tableau*/
+    .table {
+        font-size: 1.7vh;
+        width: 100%;
+    }
+}
