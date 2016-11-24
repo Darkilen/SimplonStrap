@@ -381,56 +381,111 @@ ol {}
 
 /* -----------------------------------------------Grid */
 
-.containflex {
-    display: flex;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-}
+/*- The Responsive Grid */
 
-.colnorm {
-    flex: 1;
+.grid, .borderbox{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.coltiny {
-    flex: 0.5;
-    box-sizing: border-box;
+/* Grid Display*/
+
+.grid {
+    display: block;
+    clear: both;
 }
 
-.colmedium {
-    flex: 2;
-    box-sizing: border-box;
+/* Cancel spaces between elements*/
+
+.no-space {
+    padding: 0;
+}
+.grid *{
+  box-sizing: border-box;
 }
 
-.colbig {
-    flex: 4;
-    box-sizing: border-box;
+/* Grid Widths */
+/*--1/12--*/
+.grid .one-twelve, .grid .w-1-12 {
+    width: calc(100%/12);
+    float: left;
+    padding: 10px;
+}
+/*--2/12--*/
+.grid .two-twelve, .grid .w-1-6, .grid .w-2-12 {
+    width: calc(100%/6);
+    float: left;
+    padding: 10px;
+}
+/*--3/12--*/
+.grid .three-twelve, .grid .w-1-4, .grid .w-3-12 {
+    width: calc(100%/4);
+    float: left;
+    padding: 10px;
+}
+/*--4/12--*/
+.grid .four-twelve, .grid .w-1-3,.grid .w-2-6, .grid .w-4-12 {
+    width: calc(100%/3);
+    float: left;
+    padding: 10px;
+}
+/*--5/12--*/
+.grid .five-twelve, .grid .w-5-12 {
+    width: calc(500%/12);
+    float: left;
+    padding: 10px;
+}
+/*--6/12--*/
+.grid .six-twelve, .grid .w-1-2, .grid .w-2-4, .grid .w-3-6, .grid .w-6-12{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+/*--7/12--*/
+.grid .seven-twelve, .grid .w-7-12 {
+    width: calc(700%/12);
+    float: left;
+    padding: 10px;
+}
+/*--8/12--*/
+.grid .eight-twelve, .grid .w-2-3,.grid .w-4-6, .grid .w-8-12 {
+    width: calc(200%/3);
+    float: left;
+    padding: 10px;
+}
+/*--9/12--*/
+.grid .nine-twelve, .grid .w-3-4, .grid .w-9-12 {
+    width: 75%;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+/*--10/12--*/
+.grid .ten-twelve, .grid .w-5-6, .grid .w-10-12 {
+    width: calc(500%/6);
+    float: left;
+    padding: 10px;
+}
+/*--11/12--*/
+.grid .onze-twelve, .grid .w-11-12 {
+    width: calc(1100%/12);
+    float: left;
+    padding: 10px;
+}
+/*--12/12--*/
+.grid .twelve-twelve, .grid .w-12-12, .grid .w-1{
+    width: 100%;
+    float: left;
+    padding: 10px;
 }
 
-.colflexnorm {
-    display: flex;
-    flex: 1;
-    box-sizing: border-box;
+/**Grid Media Query**/
+@media all (max-width:768px){
+  .grid>* {
+    width:100%;
+  }
 }
-
-.colflextiny {
-    display: flex;
-    flex: 0.5;
-    box-sizing: border-box;
-}
-
-.colflexmedium {
-    display: flex;
-    flex: 2;
-    box-sizing: border-box;
-}
-
-.colflexbig {
-    display: flex;
-    flex: 4;
-    box-sizing: border-box;
-}
-
 
 /* -----------------------------------------------Form */
 
