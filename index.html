@@ -84,7 +84,7 @@
 .nav {
     width: 100%;
 }
-.nav ul {
+.nav>ul {
     list-style-type: none;
     width: 100%;
     position: absolute;
@@ -92,7 +92,7 @@
     margin: 0;
     padding: 0;
 }
-.nav ul li {
+.nav>ul li {
     flex: 1;
 }
 .nav li a {
@@ -106,6 +106,7 @@
 .nav li:hover a {
     background-color: #aaaaaa;
     color: black;
+    transition: 0.2s;
 }
 
 /*Liens Toggle*/
@@ -120,6 +121,7 @@
 /*Hover liens Toggle*/
 .nav li:hover ul a:hover {
     background-color: #e2575e;
+    transition: 0.1s;
 }
 
 /*Cache liens Toggle*/
