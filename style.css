@@ -1,10 +1,13 @@
 body {
-  width: 90%;
   margin: 0 auto;
 }
 
 header {
   text-align: center;
+}
+
+main {
+    padding-top: 100px;
 }
 
 
@@ -100,5 +103,8 @@ h4 {
   }
   footer section {
     display: none;
+  }
+  main {
+      padding-top: 10px;
   }
 }

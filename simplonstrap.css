@@ -22,7 +22,6 @@ img {
     max-width: 100%;
 }
 
-
 /* -----------------------------------------------Helper Class */
 
 
@@ -199,185 +198,69 @@ code {
     color: white;
 }
 
-
-/*** Titles Structures Styles ***/
-
-h1 {}
-
-h2 {}
-
-h3 {}
-
-h4 {}
-
-
-/*** Link Structures Styles ***/
-
-a {}
-
-a:hover {}
-
-a:focus {}
-
-a:active {}
-
-a:visited {}
-
-
 /* -----------------------------------------------Navigation Bar */
 
-
-/*** List General Styles ***/
-
-ul li {}
-
-ul {}
-
-ol {}
-
-
-/*** Nav ***/
-
-
-/** NAV BAR Instructions
-    * The text will be transformed in Uppercase and aligned center,
-    * There'll be 3 sizes to choosefrom,
-    * Display flex for the direction of the nav (horizontal or vertical)
-
-    $ Made by @ryderblack
-   */
-
-
-/* Horizontal nav bar with 3 sizes */
-
-.nav-landscape-L {
-    text-align: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.nav-landscape-M {
-    text-align: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-}
-
-.nav-landscape-S {
-    text-align: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
-    width: 40%;
-}
-
-
-/** Horizontal nav bar with 3 sizes */
-
-.nav-portrait-L {
-    text-align: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.nav-portrait-M {
-    text-align: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-}
-
-.nav-portrait-S {
-    text-align: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
-
 /* Navigation Bar*/
-
 .nav {
-    display: flex;
-    justify-content: space-around;
-    border-radius: 0.3em;
-    background: white;
-}
-
-.nav ul {
-    padding: 2% 0;
     width: 100%;
-    text-align: center;
 }
-
+.nav ul {
+    list-style-type: none;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 .nav ul li {
-    display: inline;
+    flex: 1;
+}
+.nav li a {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #2f3036;
+    display: flex;
+    justify-content: center;
+}
+.nav li:hover a {
+    background-color: #aaaaaa;
+    color: black;
+}
+/*Liens Toggle*/
+.nav li:hover ul a {
+    background-color: #aaaaaa;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+    width: 11%;
+}
+/*Hover liens Toggle*/
+.nav li:hover ul a:hover {
+    background-color: #e2575e;
+}
+/*Cache liens Toggle*/
+.nav li ul {
+    display: none;
+}
+/*Permet affichage liens Toggle*/
+.nav ul li a:hover+.hid_ul, .hid_ul:hover {
+    display: block;
+    padding: 0;
 }
 
-.nav ul li a {
-    display: inline-block;
-    padding: 0 1%;
-    background: pink;
-    border: 2px solid pink;
-    border-radius: 0.3em;
-    color: white;
-    font-weight: bold;
+.nav input[type=checkbox], .show-menu {
+    display: none;
 }
-
-.nav ul li a:hover, .nav ul li a:focus, .nav ul li a:active {
-    color: pink;
-    display: inline-block;
-    padding: 0 1%;
-    background: white;
-    border: 2px solid #dedede;
-    border-radius: 0.3em;
+.show-menu {
+    color: #fff;
+    background-color: #2f3036;
+    text-align: center;
+    padding: 10px 0;
 }
-
-#navico a{
-	color:pink;
+.nav input[type=checkbox]:checked~ul:first-of-type {
+    display: block;
 }
-
-#navico a:hover, #navico a:focus, #navico a:active {
-    color: deeppink;
-}
-
-
-/* Navigation Bar Media Queries*/
-
-@media screen and (min-width:868px){
-	#navico {
-	display:none;
-	}
-}
-
-
-
-@media screen and (max-width: 867px) {
-	#navico {
-		display:static;
-		width:100%;
-		font-size:2.5em;
-		color: pink;
-	}
-
-	.nav ul li a{
-		display:none;
-	}
-
-	.nav:hover li a{
-		display: block;
-		width:100%;
-		height:50px;
-		line-height:50px;
-	}
-}
-
 
 /* -----------------------------------------------Grid */
 
@@ -640,5 +523,19 @@ ol {}
     .table {
         font-size: 1.7vh;
         width: 100%;
+    }
+    /*------------------------------------------------Nav*/
+    .nav ul li, .nav ul li a {
+        width: 100%;
+    }
+    .show-menu {
+        display: block;
+    }
+    .nav ul:first-of-type {
+        display: none;
+    }
+
+    .nav .hid_ul li {
+        display: none;
     }
 }

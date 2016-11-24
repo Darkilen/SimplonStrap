@@ -16,178 +16,156 @@
         <h2> The Best CSS Framework Forever and ever</h2>
         <!-- Add Navigation Bar-->
         <nav class="nav" role="navigation">
-			<ul>
-				<div id="hamburger">
-					<div id="navico">
-						<a href="#">
-							<span class="icon-menu" aria-hidden="true"></span>
-							<span class="visuallyhidden">Menu</span>
-						</a>
-					</div>
-					<li><a href="#">Accueil</a></li>
-					<li><a href="#menu">Navigation</a></li>
-					<li><a href="#grid">Grille</a></li>
-					<li><a href="#form">Formulaire</a></li>
-					<li><a href="#tableau">Tableau</a></li>
-					<li><a href="#buttons">Boutons</a></li>
-					<li><a href="#reset">Reset</a></li>
-					<li><a href="#helper">Helper Class</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</div>
+            <label for="show-menu" class="show-menu">Menu ￬</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#menu">Navigation</a></li>
+                <li><a href="#grid">Grille</a>
+                    <ul class="hid_ul">
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                    </ul>
+                </li>
+                <li><a href="#form">Formulaire</a></li>
+                <li><a href="#tableau">Tableau</a></li>
+                <li><a href="#buttons">Boutons</a></li>
+                <li><a href="#reset">Reset</a></li>
+                <li><a href="#helper">Helper Class</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-		</nav>
+        </nav>
     </header>
     <main>
         <section id="menu">
             <h3> La Barre de Navigation </h3>
             <!-- Add Menu -->
-            <p> Notre barre de navigation vous permettra d'acquérir un menu Hamburger responsive !<br/></p>
-			<h5 class="centert">Sa construction </h5><br/>
-			<p>Un container doté de la classe .nav pour l'adaptation à n'importe quel type de menu et non uniquement une barre de navigation <br/>
-			On initialise ensuite une liste à puce avec la balise ul comprenant les divers éléments du menu <br/>
-			On ajoute un second container avec un id hamburger qui permettra le declenchement du déroulement du menu en hover<br/>
-			On ajoute un troisième container avec un id Navico qui engloble l'icone de l'hamburger en lui même et une largeur égale à celle de son parent pour une meilleure accessibilité du déroulement sur mobile<br/>
-			On crée ensuite les différents liens du menu entre les balises li de la liste à puce <br/>
-			<h5 class="centert">Le responsive</h5><br/>
-			<p>L'adaptabilité du menu est geré par des media queries à definir en fonction de votre design personel<br/>
-			- Sur Desktop : <br/>
-			Par défaut, nous avons fait le choix de cacher l'icone Hamburger. Les éléments de la liste sont sous la forme d'inline-block.<br/>
-			- Sur Mobile : <br/>
-			Les éléments des listes sont cette fois ci affiché en tant que block et restent cliquables sur la totalité de la largeur de l'ecran
-			</p>
-			<nav class="nav" role="navigation">
-				<ul>
-					<div id="hamburger">
-						<div id="navico">
-							<a href="#">
-								<span class="icon-menu" aria-hidden="true"></span>
-								<span class="visuallyhidden">Menu</span>
-							</a>
-						</div>
-						<li><a href="#">Accueil</a></li>
-						<li><a href="#menu">Navigation</a></li>
-						<li><a href="#grid">Grille</a></li>
-						<li><a href="#form">Formulaire</a></li>
-						<li><a href="#tableau">Tableau</a></li>
-						<li><a href="#buttons">Boutons</a></li>
-						<li><a href="#reset">Reset</a></li>
-						<li><a href="#helper">Helper Class</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</div>
-				</ul>
-			</nav>
-            <div class="containflex">
-                <!--Nom de la class a voir avec Julien -->
-                <div class="colnorm">
+            <h5 class="centert">Sa construction </h5><br/>
+            <p>Un container doté de la classe .nav pour l'adaptation à n'importe quel type de menu et non uniquement une barre de navigation <br/> On initialise ensuite une liste à puce avec la balise ul comprenant les divers éléments du menu <br/>
+                On crée ensuite les différents liens du menu entre les balises li de la liste à puce <br/>
+                <h5 class="centert">Le responsive</h5><br/>
+                <p>L'adaptabilité du menu est geré par des media queries à definir en fonction de votre design personel<br/> - Sur Desktop : <br/>Les éléments de la liste sont en flex 1.
+                    <br/> - Sur Mobile : <br/>
+                </p>
+                <div class="containflex">
                     <!--Nom de la class a voir avec Julien -->
-                    <h4> Le Html </h4>
-                    <code>
+                    <div class="colnorm">
+                        <!--Nom de la class a voir avec Julien -->
+                        <h4> Le Html </h4>
+                        <code>
 &ltnav class="nav" role="navigation"&gt
 &ltul&gt
-&ltdiv id="hamburger"&gt
-  &ltdiv id="navico"&gt
-    &lta href="#"&gt
-      &ltspan class="icon-menu" aria-hidden="true"&gt&lt/span&gt
-      &ltspan class="visuallyhidden"&gtMenu&lt/span&gt
-    &lt/a&gt
-  &lt/div&gt
   &ltli&gt&lta href="#">Accueil&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#menu">Navigation&lt/a&gt&lt/li&gt
-  &ltli&gt&lta href="#grid">Grille&lt/a&gt&lt/li&gt
+  &ltli&gt&lta href="#grid">Grille&lt/a&gt
+      &ltul class="hid_ul"&gt
+          &ltli&gt&lta href="#"&gtOne&lt/a>&lt/li&gt
+          &ltli&gt&lta href="#"&gtTwo&lt/a>&lt/li&gt
+          &ltli&gt&lta href="#"&gtThree&lt/a>&lt/li&gt
+      &lt/ul&gt
+  &lt/li&gt
   &ltli&gt&lta href="#form">Formulaire&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#tableau">Tableau&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#buttons">Boutons&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#reset">Reset&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#helper">Helper Class&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#contact">Contact&lt/a&gt&lt/li&gt
-&lt/div&gt
-    &lt/ul&gt
+&lt/ul&gt
 &lt/nav&gt
             </code>
-                </div>
-                <div class="colnorm">
-                    <!--Nom de la class a voir avec Julien -->
-                    <h4> Le Css </h4>
-                    <code>
+                    </div>
+                    <div class="colnorm">
+                        <!--Nom de la class a voir avec Julien -->
+                        <h4> Le Css </h4>
+                        <code>
 /* Navigation Bar*/
 
 .nav {
-  display: flex;
-  justify-content: space-around;
-  border-radius: 0.3em;
-  background: white;
+    width: 100%;
 }
-
 .nav ul {
-  padding: 2% 0;
-  width: 100%;
-  text-align: center;
+    list-style-type: none;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
-
 .nav ul li {
-  display: inline;
+    flex: 1;
+}
+.nav li a {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #2f3036;
+    display: flex;
+    justify-content: center;
+}
+.nav li:hover a {
+    background-color: #aaaaaa;
+    color: black;
 }
 
-.nav ul li a {
-  display: inline-block;
-  padding: 0 1%;
-  background: pink;
-  border: 2px solid pink;
-  border-radius: 0.3em;
-  color: white;
-  font-weight: bold;
+/*Liens Toggle*/
+.nav li:hover ul a {
+    background-color: #aaaaaa;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+    width: 11%;
 }
 
-.nav ul li a:hover, .nav ul li a:focus, .nav ul li a:active {
-  color: pink;
-  display: inline-block;
-  padding: 0 1%;
-  background: white;
-  border: 2px solid #dedede;
-  border-radius: 0.3em;
+/*Hover liens Toggle*/
+.nav li:hover ul a:hover {
+    background-color: #e2575e;
 }
 
-#navico a{
-  color:pink;
+/*Cache liens Toggle*/
+.nav li ul {
+    display: none;
 }
 
-#navico a:hover, #navico a:focus, #navico a:active {
-  color: deeppink;
+/*Permet affichage liens Toggle*/
+.nav ul li a:hover+.hid_ul, .hid_ul:hover {
+    display: block;
+    padding: 0;
 }
 
+.nav input[type=checkbox], .show-menu {
+    display: none;
+}
+.show-menu {
+    color: #fff;
+    background-color: #2f3036;
+    text-align: center;
+    padding: 10px 0;
+}
+.nav input[type=checkbox]:checked~ul:first-of-type {
+    display: block;
+}
 
+@media screen and (max-width: 800px) {
 /* Navigation Bar Media Queries*/
 
-@media screen and (min-width:868px){
-  #navico {
-    display:none;
-  }
-}
+    .nav ul li, .nav ul li a {
+        width: 100%;
+    }
+    .show-menu {
+        display: block;
+    }
+    .nav ul:first-of-type {
+        display: none;
+    }
 
-
-
-@media screen and (max-width: 867px) {
-  #navico {
-    display:static;
-    width:100%;
-    font-size:2.5em;
-    color: pink;
-  }
-
-  .nav ul li a{
-    display:none;
-  }
-
-  .nav:hover li a{
-    display: block;
-    width:100%;
-    height:50px;
-    line-height:50px;
-  }
+    .nav .hid_ul li {
+        display: none;
+    }
 }
             </code>
+                    </div>
                 </div>
-            </div>
         </section>
         <hr></hr>
         <section id="grid">
@@ -195,26 +173,26 @@
             <!-- Add Grid -->
 
             <p>
-La grille permet deplacer et de dimensionner facilement ses divs et ses colonnes. "containflex" permet d'initialiser la grille. La taille de la grille prend celle de la div sur laquelle elle est initialisée.
-"colnorm" créer une colonne qui adapte ça taille aux nombres de colonnes placer dans le "containflex".
-"colnorm" donne donc la même taille à toutes les divs. Vous pouvez aussi choisir des tailles : petit, moyen ou grand avec "coltiny", "colmedium" et "colbig". Vous disposez aussi de colonne "flex" qui permette de mettre des colonnes dans des colonnes car elles font office de container.
-			</p>
-			<div style="height: 600px; border: 1px solid black;" class="containflex">
+                La grille permet deplacer et de dimensionner facilement ses divs et ses colonnes. "containflex" permet d'initialiser la grille. La taille de la grille prend celle de la div sur laquelle elle est initialisée. "colnorm" créer une colonne qui adapte ça taille
+                aux nombres de colonnes placer dans le "containflex". "colnorm" donne donc la même taille à toutes les divs. Vous pouvez aussi choisir des tailles : petit, moyen ou grand avec "coltiny", "colmedium" et "colbig". Vous disposez aussi de
+                colonne "flex" qui permette de mettre des colonnes dans des colonnes car elles font office de container.
+            </p>
+            <div style="height: 600px; border: 1px solid black;" class="containflex">
 
-				<div style="background-color: pink; padding: 16px;" class="colflexnorm">
+                <div style="background-color: pink; padding: 16px;" class="colflexnorm">
 
-					<div style="background-color: grey; margin: 6px;" class="coltiny">
+                    <div style="background-color: grey; margin: 6px;" class="coltiny">
 
-					</div>
-					<div style="background-color: grey; margin: 6px;" class="colmedium">
+                    </div>
+                    <div style="background-color: grey; margin: 6px;" class="colmedium">
 
-					</div>
-					<div style="background-color: grey; margin: 6px;" class="colbig">
-					</div>
-				</div>
-				<div style="background-color: grey;" class="colnorm">
-				</div>
-			</div>
+                    </div>
+                    <div style="background-color: grey; margin: 6px;" class="colbig">
+                    </div>
+                </div>
+                <div style="background-color: grey;" class="colnorm">
+                </div>
+            </div>
             <div class="containflex">
                 <!--Nom de la class a voir avec Julien -->
                 <div class="colnorm">
@@ -560,7 +538,7 @@ La grille permet deplacer et de dimensionner facilement ses divs et ses colonnes
         <section id="tableau">
             <h3> Le Tableau </h3>
             <p>
-              Ajoutez simplement la classe "table" a votre balise table, les effet sont décrit dans le tableau d'exemple suivant.
+                Ajoutez simplement la classe "table" a votre balise table, les effet sont décrit dans le tableau d'exemple suivant.
             </p>
             <table class="table">
                 <thead>
@@ -930,7 +908,7 @@ img {
 
             </code>
                 </div>
-				<div class="colnorm">
+                <div class="colnorm">
                     <!--Nom de la class a voir avec Julien -->
                     <h4> Cacher un élément  </h4>
                     <code>
@@ -953,7 +931,7 @@ img {
   overflow: hidden;
 }
 				</code>
-            </div>
+                </div>
                 <div class="colnorm">
                     <!--Nom de la class a voir avec Julien -->
                     <h4> Centrer un élément  </h4>
@@ -968,8 +946,8 @@ img {
   text-align:center;
 }
 				</code>
-            </div>
-			<div class="colnorm">
+                </div>
+                <div class="colnorm">
                     <!--Nom de la class a voir avec Julien -->
                     <h4> Divers  </h4>
                     <code>
