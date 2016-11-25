@@ -1,21 +1,41 @@
 /* -----------------------------------------------Reset User Agent */
-
-* {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    margin: 0;
-    /* Reintialise all margin*/
-    padding: 0;
-    /* Reintialise all padding*/
-    list-style-type: none;
-    /* Delete Bullet on list */
-    text-decoration: none;
-    /* Delete Underline on Link */
-    box-sizing: border-box;
-    /* Padding and Border include in box size */
+/*To remove any margin or border, reset font size & font style, reset the vertical alignment to its default value*/
+html, body, div, span, applet,
+p, blockquote,
+a, big, cite, code,
+em, img,
+small, strike, strong, tt,
+b, u, i,
+ol, ul, li,
+form, label, legend,
+table,
+article, aside, canvas,
+figure, figcaption, footer, header,
+menu, nav, output, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+	font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* hyphens & too long words go to next line */
+div, textarea, table, td, th, code, pre, samp {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+/*To remove bullets from bulleted lists*/
+ul, li {
+	list-style: none;
+}
+/*To remove underlining or any other effect on links*/
+a, a:target, a:visited, a:active {
+  text-decoration: none;
+  color: black;
 }
 
 img {
