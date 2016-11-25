@@ -437,7 +437,7 @@ code {
     width: 100px;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
-    background: radial-gradient(#98FB98, #32CD32);
+    background-color: #8FE583;
     cursor: pointer;
 }
 
@@ -519,16 +519,16 @@ code {
     width: 100px;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
-    background: radial-gradient(#EEEEEE, #CCCCCC);
+    background-color: #EEEEEE;
     cursor: pointer;
 }
 
 .btn.vld {
-    background: radial-gradient(#98FB98, #32CD32);
+    background-color: #8FE583;
 }
 
 .btn.anl {
-    background: radial-gradient(#FF0000, #CF0A1D);
+    background-color: #e2575e;
 }
 
 .btn:active {
