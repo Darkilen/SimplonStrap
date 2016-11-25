@@ -52,7 +52,7 @@
                 Pour intégrer un sous-menu, utilisez la classe "hid_ul" sur l'ul du sous-menu.
                 <h5 class="centert">Le responsive</h5><br/>
                 <p>L'adaptabilité du menu est geré par des media queries à definir en fonction de votre design personel<br/> - Sur Desktop : <br/>Les éléments de la liste sont en flex 1.
-                    <br/> - Sur Mobile : <br/>
+                    <br/> - Sur Mobile : <br>L'affichage est en block sur un click de "Menu", les sous-menus sont affichés mais avec un font-size inférieur et des bordures afin de bien les distinguer <br/>
                 </p>
                 <div class="containflex">
                     <!--Nom de la class a voir avec Julien -->
@@ -157,18 +157,24 @@
 @media screen and (max-width: 800px) {
 /* Navigation Bar Media Queries*/
 
-    .nav ul li, .nav ul li a {
+    .nav ul li, .nav li a {
         width: 100%;
     }
     .show-menu {
         display: block;
     }
-    .nav ul:first-of-type {
+    .nav>ul {
         display: none;
     }
-
-    .nav .hid_ul li {
-        display: none;
+    .nav .hid_ul {
+        display: block;
+    }
+    .nav .hid_ul li a{
+        font-size: 0.8em;
+        box-shadow: inset 0px 1px 0px grey;
+    }
+    .nav .hid_ul li:last-child{
+        border-bottom: 1px solid grey;
     }
 }
             </code>
@@ -530,7 +536,7 @@
     width: 100px;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
-    background: radial-gradient(#98FB98, #32CD32);
+    background-color: #8FE583;
     cursor: pointer;
 }
 
@@ -772,16 +778,16 @@
     width: 100px;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
-    background: radial-gradient(#EEEEEE, #CCCCCC);
+    background-color: #EEEEEE;
     cursor: pointer;
 }
 
 .btn.vld {
-    background:radial-gradient(#7FFF00, #32CD32);
+    background-color: #8FE583;
 }
 
 .btn.anl {
-    background:radial-gradient(#FF0000, #CF0A1D);
+    background-color: #e2575e;
 }
 
 .btn:active {

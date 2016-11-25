@@ -594,7 +594,11 @@ code {
     .nav .hid_ul {
         display: block;
     }
-    .nav .hid_ul li{
+    .nav .hid_ul li a{
         font-size: 0.8em;
+        box-shadow: inset 0px 1px 0px grey;
+    }
+    .nav .hid_ul li:last-child{
+        border-bottom: 1px solid grey;
     }
 }
