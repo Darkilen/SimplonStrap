@@ -34,16 +34,22 @@
                 <li><a href="#reset">Reset</a></li>
                 <li><a href="#helper">Helper Class</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <label for="show-menu" class="show-menu">Fermer ↑</label>
+                <input type="checkbox" id="show-menu" role="button">
             </ul>
+
         </nav>
     </header>
     <main>
         <section id="menu">
             <h3> La Barre de Navigation </h3>
-            <!-- Add Menu -->
+            <p>
+              La nav est la même que celle du menu de ce site.
+            </p>
             <h5 class="centert">Sa construction </h5><br/>
             <p>Un container doté de la classe .nav pour l'adaptation à n'importe quel type de menu et non uniquement une barre de navigation <br/> On initialise ensuite une liste à puce avec la balise ul comprenant les divers éléments du menu <br/>
                 On crée ensuite les différents liens du menu entre les balises li de la liste à puce <br/>
+                Pour intégrer un sous-menu, utilisez la classe "hid_ul" sur l'ul du sous-menu.
                 <h5 class="centert">Le responsive</h5><br/>
                 <p>L'adaptabilité du menu est geré par des media queries à definir en fonction de votre design personel<br/> - Sur Desktop : <br/>Les éléments de la liste sont en flex 1.
                     <br/> - Sur Mobile : <br/>
