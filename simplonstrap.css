@@ -204,7 +204,7 @@ code {
 .nav {
     width: 100%;
 }
-.nav ul {
+.nav>ul {
     list-style-type: none;
     width: 100%;
     position: absolute;
@@ -212,7 +212,7 @@ code {
     margin: 0;
     padding: 0;
 }
-.nav ul li {
+.nav>ul li {
     flex: 1;
 }
 .nav li a {
@@ -226,25 +226,26 @@ code {
 .nav li:hover a {
     background-color: #aaaaaa;
     color: black;
+    transition: 0.2s;
 }
 /*Liens Toggle*/
 .nav li:hover ul a {
     background-color: #aaaaaa;
     color: #2f3036;
-    height: 40px;
-    line-height: 40px;
-    width: 11%;
+    height: 50px;
+    line-height: 50px;
 }
 /*Hover liens Toggle*/
 .nav li:hover ul a:hover {
     background-color: #e2575e;
+    transition: 0.1s;
 }
 /*Cache liens Toggle*/
 .nav li ul {
     display: none;
 }
 /*Permet affichage liens Toggle*/
-.nav ul li a:hover+.hid_ul, .hid_ul:hover {
+.nav>ul li a:hover+.hid_ul, .hid_ul:hover {
     display: block;
     padding: 0;
 }
@@ -580,17 +581,20 @@ code {
         width: 100%;
     }
     /*------------------------------------------------Nav*/
-    .nav ul li, .nav ul li a {
+
+    .nav ul li, .nav li a {
         width: 100%;
     }
     .show-menu {
         display: block;
     }
-    .nav ul:first-of-type {
+    .nav>ul {
         display: none;
     }
-
-    .nav .hid_ul li {
-        display: none;
+    .nav .hid_ul {
+        display: block;
+    }
+    .nav .hid_ul li{
+        font-size: 0.8em;
     }
 }
