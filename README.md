@@ -1,17 +1,23 @@
 # SimplonStrap
-#
-# Library of css files by & for Marsians of Marseille
-#
-#
-#
-# ---- grid
-# 12-columns-type grid, with various fractionned column sizes
-# container class: .grid
-# column dimensions: w-dividend-divider
-# Exemples:
-# 1 twelth column = w-1-12 = one-twelve
-# 1 tier column = w-1-3 = w-4-12 = four-twelve
-# 50% column = w-1-2 = w-2-4 = w-3-6 = w-6-12 = six-twelve
-# For personalize your own grids, my advice is to use their greatest common divisor class names
-# If you want to make a grid with a 7/12 and a 5/12 size columns, you should put 'w-7-12' and 'w-5-12' columns
-# If you just want one separate in 1 tier and 2 tiers size columns, you may use 'w-1-3' and 'w-2-3'
+
+## Voir la Doc : https://simplonmars3.github.io/SimplonStrap/
+
+### Elements Finalisés :
+- Reset User Agents
+- Grille en Flex
+- Formulaire
+- Tableaux
+
+### Elements en cours de développement :
+- Barre de Navigation // Menu
+- Helper Class
+- Font Icons avec Fontello (pour toute demande Voir Issue #4)
+-
+-
+
+### Bugs en cours :
+- Probleme Balise Code sur index.html
+
+### Bonnes Pratiques : 
+- Lors d'un Pull Request : Proposez du code !! (dans la mesure du possible )
+- Lorsqu'une de vos Pull Request et Issues sont acceptés vous pouvez retrouver la modification après le merge portant le nom #fix+numeropullrequest
