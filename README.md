@@ -4,7 +4,7 @@
 #
 #
 #
-# ---- grid
+# ------ Grid
 # 12-columns-type grid, with various fractionned column sizes
 # container class: .grid
 # column dimensions: w-dividend-divider

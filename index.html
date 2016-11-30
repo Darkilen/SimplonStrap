@@ -21,10 +21,10 @@
             <ul>
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#menu">Navigation</a></li>
-                <li><a href="#grid">Grille</a>
+                <li><a href="#">Grille</a>
                     <ul class="hid_ul">
-                        <li><a href="#">One</a></li>
-                        <li><a href="#">Two</a></li>
+                        <li><a href="#flexgrid">Grille Flex</a></li>
+                        <li><a href="#noflexgrid">Grille sans Flex</a></li>
                         <li><a href="#">Three</a></li>
                     </ul>
                 </li>
@@ -44,12 +44,11 @@
         <section id="menu">
             <h3> La Barre de Navigation </h3>
             <p>
-              La nav est la même que celle du menu de ce site.
+                La nav est la même que celle du menu de ce site.
             </p>
             <h5 class="centert">Sa construction </h5><br/>
-            <p>Un container doté de la classe .nav pour l'adaptation à n'importe quel type de menu et non uniquement une barre de navigation <br/> On initialise ensuite une liste à puce avec la balise ul comprenant les divers éléments du menu <br/>
-                On crée ensuite les différents liens du menu entre les balises li de la liste à puce <br/>
-                Pour intégrer un sous-menu, utilisez la classe "hid_ul" sur l'ul du sous-menu.
+            <p>Un container doté de la classe .nav pour l'adaptation à n'importe quel type de menu et non uniquement une barre de navigation <br/> On initialise ensuite une liste à puce avec la balise ul comprenant les divers éléments du menu <br/> On crée
+                ensuite les différents liens du menu entre les balises li de la liste à puce <br/> Pour intégrer un sous-menu, utilisez la classe "hid_ul" sur l'ul du sous-menu.
                 <h5 class="centert">Le responsive</h5><br/>
                 <p>L'adaptabilité du menu est geré par des media queries à definir en fonction de votre design personel<br/> - Sur Desktop : <br/>Les éléments de la liste sont en flex 1.
                     <br/> - Sur Mobile : <br>L'affichage est en block sur un click de "Menu", les sous-menus sont affichés mais avec un font-size inférieur et des bordures afin de bien les distinguer <br/>
@@ -182,16 +181,16 @@
                 </div>
         </section>
         <hr></hr>
-        <section id="grid">
-            <h3> La Grille </h3>
+        <section id="flexgrid">
+            <h3> La Grille Flex </h3>
             <!-- Add Grid -->
 
             <p>
-                La grille permet deplacer et de dimensionner facilement ses divs et ses colonnes. "containflex" permet d'initialiser la grille. La taille de la grille prend celle de la div sur laquelle elle est initialisée. "colnorm" créer une colonne qui adapte ça taille
-                aux nombres de colonnes placer dans le "containflex". "colnorm" donne donc la même taille à toutes les divs. Vous pouvez aussi choisir des tailles : petit, moyen ou grand avec "coltiny", "colmedium" et "colbig". Vous disposez aussi de
+                La grille permet de placer et de dimensionner facilement ses divs et ses colonnes. "containflex" permet d'initialiser la grille. La taille de la grille prend celle de la div sur laquelle elle est initialisée. "colnorm" crée une colonne qui adapte sa taille
+                aux nombres de colonnes placées dans le "containflex". "colnorm" donne donc la même taille à toutes les divs. Vous pouvez aussi choisir des tailles : petit, moyen ou grand avec "coltiny", "colmedium" et "colbig". Vous disposez aussi de
                 colonne "flex" qui permette de mettre des colonnes dans des colonnes car elles font office de container.
             </p>
-            <div style="height: 600px; border: 1px solid black;" class="containflex">
+            <div style="border: 1px solid black;" class="containflex h600p">
 
                 <div style="background-color: pink; padding: 16px;" class="colflexnorm">
 
@@ -214,7 +213,7 @@
                     <h4> Le Html </h4>
                     <code>
 
-&ltdiv style=" height: 600px; border: 1px solid black;" class="containflex"&gt
+&ltdiv style="border: 1px solid black;" class="containflex h600p"&gt
 
     &ltdiv style="background-color: red; padding: 16px;" class="colflexnorm"&gt
 
@@ -291,6 +290,180 @@
   box-sizing: border-box;
 }
 
+            </code>
+                </div>
+            </div>
+        </section>
+        <section id="noflexgrid">
+            <h3> La Grille sans Flex </h3>
+            <!-- Add Grid -->
+
+            <p>Pour les amateurs de BootStrap et les vétérans d'Internet Explorer, nous avons également implémenté une grille de base 12 colonnes, n'utilisant aucun flex.<br>
+                classe du container: .grid<br>
+                Fonctionnement des dimensions des colonnes: w-dividende-diviseur, allant de 1 à 12<br>
+                Exemples :</p>
+            <ul>
+              <li>une colonne de taille un douzième: "w-1-12" = "one-twelve"</li>
+              <li>une colonne de taille un tier: "w-1-3" = "w-4-12" = "four-twelve"</li>
+              <li>une colonne faisant la moitié de la taille de son parent: "w-1-2" = "w-2-4" = "w-3-6" = "w-6-12" = "six-twelve"</li>
+            </ul>
+            <p>Pour créer vos propres grilles, je vous propose d'utiliser le PGCD de leurs noms de classe. Par exemple, si vous souhaitez y mettre deux colonnes - disons un tier et deux tiers - vous pourriez leur ajouter les classes "w-1-3" et "w-2-3"; par contre, si vous souhaitez ajouter une colonne dont le PGCD est 12, mon conseil est d'utiliser uniquement les classes de largeur de colonnes terminant par 12 ("w-1-12", "w-2-12", ..., "w-12-12")</p>
+            <div style="border: 2px solid black;" class="grid">
+
+                <div style="background-color: pink; padding: 16px;" class="w-1-2">
+                    <div style="background-color: grey; border: 2px solid pink;" class="w-1-12">1/12</div>
+                    <div style="background-color: grey; border: 2px solid pink;" class="w-7-12">7/12</div>
+                    <div style="background-color: grey; border: 2px solid pink;" class="w-4-12">4/12</div>
+                </div>
+
+                <div style="background-color: grey; padding: 16px;" class="w-1-2">
+                  <div style="background-color: firebrick; border: 2px solid white;" class="w-1-3">1/3</div>
+                  <div style="background-color: firebrick; border: 2px solid white;" class="w-2-3">2/3</div>
+                </div>
+
+            </div>
+            <div class="grid">
+                <div class="w-1-2">
+                    <h4> Le Html </h4>
+
+                    <code>
+
+                      &ltdiv style="border: 2px solid black;" class="grid h600p"&gt
+
+                          &ltdiv style="background-color: pink; padding: 16px;" class="w-1-2"&gt
+                              &ltdiv style="background-color: grey; border: 2px solid pink;" class="w-1-12"&gt1/12&lt/div&gt
+                              &ltdiv style="background-color: grey; border: 2px solid pink;" class="w-7-12"&gt7/12&lt/div&gt
+                              &ltdiv style="background-color: grey; border: 2px solid pink;" class="w-4-12"&gt4/12&lt/div&gt
+                          &lt/div&gt
+
+                          &ltdiv style="background-color: grey; padding: 16px;" class="w-1-2"&gt
+                            &ltdiv style="background-color: firebrick; border: 2px solid white;" class="w-1-3"&gt1/3&lt/div&gt
+                            &ltdiv style="background-color: firebrick; border: 2px solid white;" class="w-2-3"&gt2/3&lt/div&gt
+                          &lt/div&gt
+
+                      &lt/div&gt
+
+                  </code>
+                </div>
+                <div class="w-1-2">
+                    <!--Nom de la class a voir avec Julien -->
+                    <h4> Le Css </h4>
+                    <code>
+                      /* -----------------------------------------------Grid */
+
+                      /*------ Dans SimplonStrap */
+
+                      .grid, .borderbox{
+                          -webkit-box-sizing: border-box;
+                          -moz-box-sizing: border-box;
+                          box-sizing: border-box;
+                      }
+
+                      /* Grid Display*/
+
+                      .grid {
+                          display: block;
+                          clear: both;
+                      }
+
+                      .grid *{
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                      }
+
+                      /* Grid Widths */
+                      /*--1/12--*/
+                      .grid .one-twelve, .grid .w-1-12 {
+                          width: calc(100%/12);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--2/12--*/
+                      .grid .two-twelve, .grid .w-1-6, .grid .w-2-12 {
+                          width: calc(100%/6);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--3/12--*/
+                      .grid .three-twelve, .grid .w-1-4, .grid .w-3-12 {
+                          width: calc(100%/4);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--4/12--*/
+                      .grid .four-twelve, .grid .w-1-3,.grid .w-2-6, .grid .w-4-12 {
+                          width: calc(100%/3);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--5/12--*/
+                      .grid .five-twelve, .grid .w-5-12 {
+                          width: calc(500%/12);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--6/12--*/
+                      .grid .six-twelve, .grid .w-1-2, .grid .w-2-4, .grid .w-3-6, .grid .w-6-12{
+                          width: 50%;
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--7/12--*/
+                      .grid .seven-twelve, .grid .w-7-12 {
+                          width: calc(700%/12);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--8/12--*/
+                      .grid .eight-twelve, .grid .w-2-3,.grid .w-4-6, .grid .w-8-12 {
+                          width: calc(200%/3);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--9/12--*/
+                      .grid .nine-twelve, .grid .w-3-4, .grid .w-9-12 {
+                          width: 75%;
+                          float: left;
+                          padding-right: 10px;
+                          padding-bottom: 10px;
+                      }
+                      /*--10/12--*/
+                      .grid .ten-twelve, .grid .w-5-6, .grid .w-10-12 {
+                          width: calc(500%/6);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--11/12--*/
+                      .grid .onze-twelve, .grid .w-11-12 {
+                          width: calc(1100%/12);
+                          float: left;
+                          padding: 10px;
+                      }
+                      /*--12/12--*/
+                      .grid .twelve-twelve, .grid .w-12-12, .grid .w-1{
+                          width: 100%;
+                          float: left;
+                          padding: 10px;
+                      }
+
+                      /**Grid Media Query**/
+                      @media all (max-width:768px){
+                        .grid [class*="w-"] {
+                          width:100%;
+                        }
+                      }
+
+                      /*------ Dans le style.css utilisé pour cette doc*/
+
+                      .grid [class*="w-"]{
+                        height: 100%;
+                        color: white;
+                        font-size: 0.9em;
+                      }
+                      .grid [class*="w-"] div{
+                        text-align: center;
+                      }
             </code>
                 </div>
             </div>
