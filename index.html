@@ -86,6 +86,8 @@
   &ltli&gt&lta href="#reset">Reset&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#helper">Helper Class&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#contact">Contact&lt/a&gt&lt/li&gt
+  &ltlabel for="show-menu" class="show-menu"&gtFermer ↑&lt/label&gt
+  &ltinput type="checkbox" id="show-menu" role="button"&gt
 &lt/ul&gt
 &lt/nav&gt
             </code>
@@ -324,7 +326,7 @@
                     <legend>Informations personnelles</legend>
 
                     <label for="sexe">Votre Titre</label>
-                    <select class="sexe" name="sexe">
+                    <select id="sexe" name="sexe">
                       <option value="option">Monsieur</option>
                       <option value="option">Madame</option>
                       <option value="option">Seigneur</option>
@@ -369,10 +371,10 @@
                     </div>
                 </fieldset>
 
-                <fieldset id="f2">
+                <fieldset>
                     <legend>Comment avez-vous connu ce site?</legend>
                     <p class="question">Comment avez-vous connu ce site?</p>
-                    <div id="r1">
+                    <div>
                         <input type="radio" name="radio" id="internet" value="Internet">
                         <label for="internet">Internet</label>
                         <input type="radio" name="radio" id="journal" value="Journal papier">
@@ -381,7 +383,7 @@
                         <label for="bouche">Bouche à oreille</label>
                     </div>
                     <p class="question">De quel instrument jouez vous?</p>
-                    <div id="r2">
+                    <div>
                         <input type="checkbox" name="basse" id="checkbox" value="basse">
                         <label for="basse">Slappa da bass!</label>
                         <input type="checkbox" name="guitare" id="guitare" value="guitare">
@@ -390,7 +392,7 @@
                         <label for="batterie">Poum tchak!</label>
                     </div>
                     <p class="question">Commentaires supplémentaires</p>
-                    <textarea name="name" rows="8" cols="40">coucoucoucc</textarea>
+                    <textarea name="name" rows="8" cols="40"></textarea>
                 </fieldset>
                 <button type="submit">Envoyer</button>
             </form>
@@ -405,7 +407,7 @@
       &ltlegend&gtInformations personnelles&lt/legend&gt
 
       &ltlabel for="sexe"&gtVotre Titre&lt/label&gt
-      &ltselect class="sexe" name="sexe"&gt
+      &ltselect id="sexe" name="sexe"&gt
             &ltoption value="option"&gtMonsieur&lt/option&gt
             &ltoption value="option"&gtMadame&lt/option&gt
             &ltoption value="option"&gtSeigneur&lt/option&gt
@@ -450,10 +452,10 @@
       &lt/div&gt
   &lt/fieldset&gt
 
-  &ltfieldset id="f2"&gt
+  &ltfieldset&gt
       &ltlegend&gtComment avez-vous connu ce site?&lt/legend&gt
       &ltp class="question"&gtComment avez-vous connu ce site?&lt/p&gt
-      &ltdiv id="r1"&gt
+      &ltdiv&gt
           &ltinput type="radio" name="radio" id="internet" value="Internet"&gt
           &ltlabel for="internet"&gtInternet&lt/label&gt
           &ltinput type="radio" name="radio" id="journal" value="Journal papier"&gt
@@ -462,7 +464,7 @@
           &ltlabel for="bouche"&gtBouche à oreille&lt/label&gt
       &lt/div&gt
       &ltp class="question"&gtDe quel instrument jouez vous?&lt/p&gt
-      &ltdiv id="r2"&gt
+      &ltdiv&gt
           &ltinput type="checkbox" name="basse" id="checkbox" value="basse"&gt
           &ltlabel for="basse"&gtSlappa da bass!&lt/label&gt
           &ltinput type="checkbox" name="guitare" id="guitare" value="guitare"&gt
