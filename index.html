@@ -22,11 +22,11 @@
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#download">Téléchargement</a></li>
                 <li><a href="#menu">Navigation</a></li>
-                <li><a href="#">Grille</a>
+                <li>
+                    <a href="#">Grille ￬</a>
                     <ul class="hid_ul">
                         <li><a href="#flexgrid">Grille Flex</a></li>
                         <li><a href="#noflexgrid">Grille sans Flex</a></li>
-                        <li><a href="#">Three</a></li>
                     </ul>
                 </li>
                 <li><a href="#form">Formulaire</a></li>
@@ -72,7 +72,8 @@
 &ltul&gt
   &ltli&gt&lta href="#">Accueil&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#menu">Navigation&lt/a&gt&lt/li&gt
-  &ltli&gt&lta href="#grid">Grille&lt/a&gt
+  &ltli&gt
+      &lta href="#">Grilles ￬&lt/a&gt
       &ltul class="hid_ul"&gt
           &ltli&gt&lta href="#"&gtOne&lt/a>&lt/li&gt
           &ltli&gt&lta href="#"&gtTwo&lt/a>&lt/li&gt
@@ -96,7 +97,6 @@
                         <h4> Le Css </h4>
                         <code>
 /* Navigation Bar*/
-
 .nav {
     width: 100%;
 }
@@ -111,7 +111,7 @@
 .nav>ul li {
     flex: 1;
 }
-.nav li a {
+.nav li a  {
     height: 50px;
     line-height: 50px;
     color: #fff;
@@ -119,34 +119,29 @@
     display: flex;
     justify-content: center;
 }
-.nav li:hover a {
+.nav li:hover a, .nav li:hover {
     background-color: #aaaaaa;
     color: black;
     transition: 0.2s;
 }
-
 /*Liens Toggle*/
 .nav li:hover ul a {
     background-color: #aaaaaa;
     color: #2f3036;
-    height: 40px;
-    line-height: 40px;
-    width: 11%;
+    height: 50px;
+    line-height: 50px;
 }
-
 /*Hover liens Toggle*/
 .nav li:hover ul a:hover {
     background-color: #e2575e;
     transition: 0.1s;
 }
-
 /*Cache liens Toggle*/
 .nav li ul {
     display: none;
 }
-
 /*Permet affichage liens Toggle*/
-.nav ul li a:hover+.hid_ul, .hid_ul:hover {
+.nav>ul li:hover .hid_ul, .hid_ul:hover,.nav>ul li:hover {
     display: block;
     padding: 0;
 }
@@ -175,16 +170,6 @@
     }
     .nav>ul {
         display: none;
-    }
-    .nav .hid_ul {
-        display: block;
-    }
-    .nav .hid_ul li a{
-        font-size: 0.8em;
-        box-shadow: inset 0px 1px 0px grey;
-    }
-    .nav .hid_ul li:last-child{
-        border-bottom: 1px solid grey;
     }
 }
             </code>
