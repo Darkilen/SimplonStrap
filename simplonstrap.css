@@ -233,7 +233,6 @@ code {
 .nav>ul {
     list-style-type: none;
     width: 100%;
-    position: absolute;
     display: flex;
     margin: 0;
     padding: 0;
@@ -269,6 +268,7 @@ code {
 /*Cache liens Toggle*/
 .nav li ul {
     display: none;
+    position: absolute;
 }
 /*Permet affichage liens Toggle*/
 .nav>ul li:hover .hid_ul, .hid_ul:hover,.nav>ul li:hover {
