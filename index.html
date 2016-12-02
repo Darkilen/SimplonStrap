@@ -22,11 +22,11 @@
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#download">Téléchargement</a></li>
                 <li><a href="#menu">Navigation</a></li>
-                <li><a href="#">Grille</a>
+                <li>
+                    <a href="#">Grille ￬</a>
                     <ul class="hid_ul">
                         <li><a href="#flexgrid">Grille Flex</a></li>
                         <li><a href="#noflexgrid">Grille sans Flex</a></li>
-                        <li><a href="#">Three</a></li>
                     </ul>
                 </li>
                 <li><a href="#form">Formulaire</a></li>
@@ -34,6 +34,7 @@
                 <li><a href="#buttons">Boutons</a></li>
                 <li><a href="#reset">Reset</a></li>
                 <li><a href="#helper">Helper Class</a></li>
+                <li><a href="#icons">Icones</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <label for="show-menu" class="show-menu">Fermer ↑</label>
                 <input type="checkbox" id="show-menu" role="button">
@@ -47,14 +48,36 @@
             <p>
               Pour télécharger le Framework, cliquez sur le bouton ci-dessous.
             </p><br>
-            <button class="btn" id="btndowload" type="button" name="button"><a id="adownload" href="simplonstrap.css" download>Download SimplonStrap.css</a></button>
+            <a class="btn" id="btndowload"  href="simplonstrap.css" download="SimplonStrap">Download SimplonStrap.css</a>
             <br><br><br>
         </section>
         <section id="menu">
             <h3> La Barre de Navigation </h3>
-            <p>
-                La nav est la même que celle du menu de ce site.
-            </p>
+            <nav class="nav" role="navigation">
+                <label for="show-menu" class="show-menu">Menu ￬</label>
+                <input type="checkbox" id="show-menu" role="button">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#download">Téléchargement</a></li>
+                    <li><a href="#menu">Navigation</a></li>
+                    <li>
+                        <a href="#">Grille ￬</a>
+                        <ul class="hid_ul">
+                            <li><a href="#flexgrid">Grille Flex</a></li>
+                            <li><a href="#noflexgrid">Grille sans Flex</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#form">Formulaire</a></li>
+                    <li><a href="#tableau">Tableau</a></li>
+                    <li><a href="#buttons">Boutons</a></li>
+                    <li><a href="#reset">Reset</a></li>
+                    <li><a href="#helper">Helper Class</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <label for="show-menu" class="show-menu">Fermer ↑</label>
+                    <input type="checkbox" id="show-menu" role="button">
+                </ul>
+
+            </nav>
             <h5 class="centert">Sa construction </h5><br/>
             <p>Un container doté de la classe .nav pour l'adaptation à n'importe quel type de menu et non uniquement une barre de navigation <br/> On initialise ensuite une liste à puce avec la balise ul comprenant les divers éléments du menu <br/> On crée
                 ensuite les différents liens du menu entre les balises li de la liste à puce <br/> Pour intégrer un sous-menu, utilisez la classe "hid_ul" sur l'ul du sous-menu.
@@ -62,6 +85,7 @@
                 <p>L'adaptabilité du menu est geré par des media queries à definir en fonction de votre design personel<br/> - Sur Desktop : <br/>Les éléments de la liste sont en flex 1.
                     <br/> - Sur Mobile : <br>L'affichage est en block sur un click de "Menu", les sous-menus sont affichés mais avec un font-size inférieur et des bordures afin de bien les distinguer <br/>
                 </p>
+
                 <div class="containflex">
                     <!--Nom de la class a voir avec Julien -->
                     <div class="colnorm">
@@ -72,7 +96,8 @@
 &ltul&gt
   &ltli&gt&lta href="#">Accueil&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#menu">Navigation&lt/a&gt&lt/li&gt
-  &ltli&gt&lta href="#grid">Grille&lt/a&gt
+  &ltli&gt
+      &lta href="#">Grilles ￬&lt/a&gt
       &ltul class="hid_ul"&gt
           &ltli&gt&lta href="#"&gtOne&lt/a>&lt/li&gt
           &ltli&gt&lta href="#"&gtTwo&lt/a>&lt/li&gt
@@ -96,7 +121,6 @@
                         <h4> Le Css </h4>
                         <code>
 /* Navigation Bar*/
-
 .nav {
     width: 100%;
 }
@@ -111,7 +135,7 @@
 .nav>ul li {
     flex: 1;
 }
-.nav li a {
+.nav li a  {
     height: 50px;
     line-height: 50px;
     color: #fff;
@@ -119,34 +143,29 @@
     display: flex;
     justify-content: center;
 }
-.nav li:hover a {
+.nav li:hover a, .nav li:hover {
     background-color: #aaaaaa;
     color: black;
     transition: 0.2s;
 }
-
 /*Liens Toggle*/
 .nav li:hover ul a {
     background-color: #aaaaaa;
     color: #2f3036;
-    height: 40px;
-    line-height: 40px;
-    width: 11%;
+    height: 50px;
+    line-height: 50px;
 }
-
 /*Hover liens Toggle*/
 .nav li:hover ul a:hover {
     background-color: #e2575e;
     transition: 0.1s;
 }
-
 /*Cache liens Toggle*/
 .nav li ul {
     display: none;
 }
-
 /*Permet affichage liens Toggle*/
-.nav ul li a:hover+.hid_ul, .hid_ul:hover {
+.nav>ul li:hover .hid_ul, .hid_ul:hover,.nav>ul li:hover {
     display: block;
     padding: 0;
 }
@@ -175,16 +194,6 @@
     }
     .nav>ul {
         display: none;
-    }
-    .nav .hid_ul {
-        display: block;
-    }
-    .nav .hid_ul li a{
-        font-size: 0.8em;
-        box-shadow: inset 0px 1px 0px grey;
-    }
-    .nav .hid_ul li:last-child{
-        border-bottom: 1px solid grey;
     }
 }
             </code>
@@ -1008,13 +1017,49 @@
                     <h4> Le Css </h4>
                     <code>
 /* -----------------------------------------------Reset User Agent */
-
-* {
-  margin: 0; /* Reintialise all margin*/
-  padding: 0; /* Reintialise all padding*/
-  list-style-type: none; /* Delete Bullet on list */
-  text-decoration: none; /* Delete Underline on Link */
-  box-sizing: border-box; /* Padding and Border include in box size */
+/*To remove any margin or border, reset font size & font style, reset the vertical alignment to its default value*/
+html, body, div, span, applet,
+p, blockquote,
+a, big, cite, code,
+em, img,
+small, strike, strong, tt,
+b, u, i,
+ol, ul, li,
+form, label, legend,
+table,
+article, aside, canvas,
+figure, figcaption, footer, header,
+menu, nav, output, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+	font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+            </code>
+                </div>
+                <div class="colnorm">
+                    <!--Nom de la class a voir avec Julien -->
+                    <h4> Le Css </h4>
+                    <code>
+/* hyphens & too long words go to next line */
+div, textarea, table, td, th, code, pre, samp {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+/*To remove bullets from bulleted lists*/
+ul, li {
+	list-style: none;
+}
+/*To remove underlining or any other effect on links*/
+a, a:target, a:visited, a:active {
+  text-decoration: none;
+  color: black;
 }
 
 img {
@@ -1114,6 +1159,9 @@ img {
   display:flex;
   justify-content:space-around;
 }
+.dflex-w {
+  flex-wrap: wrap;
+}
 
             </code>
                 </div>
@@ -1176,6 +1224,30 @@ img {
             </code>
                 </div>
             </div>
+        </section>
+        <section id="icons">
+          <h3> Les Icones </h3>
+          <p> Le Framework dispose d'une petite librairie d'icones que
+            vous pouvez utiliser pour votre Navigation, vos reseaux
+            sociaux, etc.</p>
+          <h5 class="centert">Integrer la librairie</h5><br/>
+          <p> - Une fois le framework télécharger, dézipper le.<br/>
+          - ajouter le dossier fontello dans votre projet web <br>
+        - linker la feuille de style fontello.css avec l'url suivante: fontello/css/fontello.css
+      sur toutes les pages necessitant des icones <br>
+    - </p>
+              <h5 class="centert">Utiliser la librairie d'icones</h5><br/>
+              <p>Ajouter la class de l'icone que vous souhaitez ajouter à votre élément <br/>
+                Vous pouvez gerer l'apparence de l'icone grace aux propriétés css relatives aux fonts
+                ex : font-size; font-weight; etc etc !
+                Amusez vous ! 
+              </p>
+          <div class="containflex">
+            <div class="colnorm">
+
+            </div>
+
+          </div>
         </section>
     </aside>
     <footer class="bg">

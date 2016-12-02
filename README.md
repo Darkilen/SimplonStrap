@@ -5,6 +5,7 @@
 ### Elements Finalisés :
 - Reset User Agents
 - Grille en Flex
+- Grille sans Flex en base 12
 - Formulaire
 - Tableaux
 
