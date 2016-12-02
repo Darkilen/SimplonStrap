@@ -20,12 +20,13 @@
             <input type="checkbox" id="show-menu" role="button">
             <ul>
                 <li><a href="#">Accueil</a></li>
+                <li><a href="#download">Téléchargement</a></li>
                 <li><a href="#menu">Navigation</a></li>
-                <li><a href="#">Grille</a>
+                <li>
+                    <a href="#">Grille ￬</a>
                     <ul class="hid_ul">
                         <li><a href="#flexgrid">Grille Flex</a></li>
                         <li><a href="#noflexgrid">Grille sans Flex</a></li>
-                        <li><a href="#">Three</a></li>
                     </ul>
                 </li>
                 <li><a href="#form">Formulaire</a></li>
@@ -33,6 +34,7 @@
                 <li><a href="#buttons">Boutons</a></li>
                 <li><a href="#reset">Reset</a></li>
                 <li><a href="#helper">Helper Class</a></li>
+                <li><a href="#icons">Icones</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <label for="show-menu" class="show-menu">Fermer ↑</label>
                 <input type="checkbox" id="show-menu" role="button">
@@ -41,11 +43,41 @@
         </nav>
     </header>
     <main>
+        <section id="download" class="centert">
+            <h3> Téléchargement du Framework SimplonStrap </h3>
+            <p>
+              Pour télécharger le Framework, cliquez sur le bouton ci-dessous.
+            </p><br>
+            <a class="btn" id="btndowload"  href="simplonstrap.css" download="SimplonStrap">Download SimplonStrap.css</a>
+            <br><br><br>
+        </section>
         <section id="menu">
             <h3> La Barre de Navigation </h3>
-            <p>
-                La nav est la même que celle du menu de ce site.
-            </p>
+            <nav class="nav" role="navigation">
+                <label for="show-menu" class="show-menu">Menu ￬</label>
+                <input type="checkbox" id="show-menu" role="button">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#download">Téléchargement</a></li>
+                    <li><a href="#menu">Navigation</a></li>
+                    <li>
+                        <a href="#">Grille ￬</a>
+                        <ul class="hid_ul">
+                            <li><a href="#flexgrid">Grille Flex</a></li>
+                            <li><a href="#noflexgrid">Grille sans Flex</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#form">Formulaire</a></li>
+                    <li><a href="#tableau">Tableau</a></li>
+                    <li><a href="#buttons">Boutons</a></li>
+                    <li><a href="#reset">Reset</a></li>
+                    <li><a href="#helper">Helper Class</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <label for="show-menu" class="show-menu">Fermer ↑</label>
+                    <input type="checkbox" id="show-menu" role="button">
+                </ul>
+
+            </nav>
             <h5 class="centert">Sa construction </h5><br/>
             <p>Un container doté de la classe .nav pour l'adaptation à n'importe quel type de menu et non uniquement une barre de navigation <br/> On initialise ensuite une liste à puce avec la balise ul comprenant les divers éléments du menu <br/> On crée
                 ensuite les différents liens du menu entre les balises li de la liste à puce <br/> Pour intégrer un sous-menu, utilisez la classe "hid_ul" sur l'ul du sous-menu.
@@ -53,6 +85,7 @@
                 <p>L'adaptabilité du menu est geré par des media queries à definir en fonction de votre design personel<br/> - Sur Desktop : <br/>Les éléments de la liste sont en flex 1.
                     <br/> - Sur Mobile : <br>L'affichage est en block sur un click de "Menu", les sous-menus sont affichés mais avec un font-size inférieur et des bordures afin de bien les distinguer <br/>
                 </p>
+
                 <div class="containflex">
                     <!--Nom de la class a voir avec Julien -->
                     <div class="colnorm">
@@ -63,7 +96,8 @@
 &ltul&gt
   &ltli&gt&lta href="#">Accueil&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#menu">Navigation&lt/a&gt&lt/li&gt
-  &ltli&gt&lta href="#grid">Grille&lt/a&gt
+  &ltli&gt
+      &lta href="#">Grilles ￬&lt/a&gt
       &ltul class="hid_ul"&gt
           &ltli&gt&lta href="#"&gtOne&lt/a>&lt/li&gt
           &ltli&gt&lta href="#"&gtTwo&lt/a>&lt/li&gt
@@ -76,6 +110,8 @@
   &ltli&gt&lta href="#reset">Reset&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#helper">Helper Class&lt/a&gt&lt/li&gt
   &ltli&gt&lta href="#contact">Contact&lt/a&gt&lt/li&gt
+  &ltlabel for="show-menu" class="show-menu"&gtFermer ↑&lt/label&gt
+  &ltinput type="checkbox" id="show-menu" role="button"&gt
 &lt/ul&gt
 &lt/nav&gt
             </code>
@@ -85,7 +121,6 @@
                         <h4> Le Css </h4>
                         <code>
 /* Navigation Bar*/
-
 .nav {
     width: 100%;
 }
@@ -100,7 +135,7 @@
 .nav>ul li {
     flex: 1;
 }
-.nav li a {
+.nav li a  {
     height: 50px;
     line-height: 50px;
     color: #fff;
@@ -108,34 +143,29 @@
     display: flex;
     justify-content: center;
 }
-.nav li:hover a {
+.nav li:hover a, .nav li:hover {
     background-color: #aaaaaa;
     color: black;
     transition: 0.2s;
 }
-
 /*Liens Toggle*/
 .nav li:hover ul a {
     background-color: #aaaaaa;
     color: #2f3036;
-    height: 40px;
-    line-height: 40px;
-    width: 11%;
+    height: 50px;
+    line-height: 50px;
 }
-
 /*Hover liens Toggle*/
 .nav li:hover ul a:hover {
     background-color: #e2575e;
     transition: 0.1s;
 }
-
 /*Cache liens Toggle*/
 .nav li ul {
     display: none;
 }
-
 /*Permet affichage liens Toggle*/
-.nav ul li a:hover+.hid_ul, .hid_ul:hover {
+.nav>ul li:hover .hid_ul, .hid_ul:hover,.nav>ul li:hover {
     display: block;
     padding: 0;
 }
@@ -164,16 +194,6 @@
     }
     .nav>ul {
         display: none;
-    }
-    .nav .hid_ul {
-        display: block;
-    }
-    .nav .hid_ul li a{
-        font-size: 0.8em;
-        box-shadow: inset 0px 1px 0px grey;
-    }
-    .nav .hid_ul li:last-child{
-        border-bottom: 1px solid grey;
     }
 }
             </code>
@@ -488,7 +508,7 @@
                     <legend>Informations personnelles</legend>
 
                     <label for="sexe">Votre Titre</label>
-                    <select class="sexe" name="sexe">
+                    <select id="sexe" name="sexe">
                       <option value="option">Monsieur</option>
                       <option value="option">Madame</option>
                       <option value="option">Seigneur</option>
@@ -533,10 +553,10 @@
                     </div>
                 </fieldset>
 
-                <fieldset id="f2">
+                <fieldset>
                     <legend>Comment avez-vous connu ce site?</legend>
                     <p class="question">Comment avez-vous connu ce site?</p>
-                    <div id="r1">
+                    <div>
                         <input type="radio" name="radio" id="internet" value="Internet">
                         <label for="internet">Internet</label>
                         <input type="radio" name="radio" id="journal" value="Journal papier">
@@ -545,7 +565,7 @@
                         <label for="bouche">Bouche à oreille</label>
                     </div>
                     <p class="question">De quel instrument jouez vous?</p>
-                    <div id="r2">
+                    <div>
                         <input type="checkbox" name="basse" id="checkbox" value="basse">
                         <label for="basse">Slappa da bass!</label>
                         <input type="checkbox" name="guitare" id="guitare" value="guitare">
@@ -554,7 +574,7 @@
                         <label for="batterie">Poum tchak!</label>
                     </div>
                     <p class="question">Commentaires supplémentaires</p>
-                    <textarea name="name" rows="8" cols="40">coucoucoucc</textarea>
+                    <textarea name="name" rows="8" cols="40"></textarea>
                 </fieldset>
                 <button type="submit">Envoyer</button>
             </form>
@@ -569,7 +589,7 @@
       &ltlegend&gtInformations personnelles&lt/legend&gt
 
       &ltlabel for="sexe"&gtVotre Titre&lt/label&gt
-      &ltselect class="sexe" name="sexe"&gt
+      &ltselect id="sexe" name="sexe"&gt
             &ltoption value="option"&gtMonsieur&lt/option&gt
             &ltoption value="option"&gtMadame&lt/option&gt
             &ltoption value="option"&gtSeigneur&lt/option&gt
@@ -614,10 +634,10 @@
       &lt/div&gt
   &lt/fieldset&gt
 
-  &ltfieldset id="f2"&gt
+  &ltfieldset&gt
       &ltlegend&gtComment avez-vous connu ce site?&lt/legend&gt
       &ltp class="question"&gtComment avez-vous connu ce site?&lt/p&gt
-      &ltdiv id="r1"&gt
+      &ltdiv&gt
           &ltinput type="radio" name="radio" id="internet" value="Internet"&gt
           &ltlabel for="internet"&gtInternet&lt/label&gt
           &ltinput type="radio" name="radio" id="journal" value="Journal papier"&gt
@@ -626,7 +646,7 @@
           &ltlabel for="bouche"&gtBouche à oreille&lt/label&gt
       &lt/div&gt
       &ltp class="question"&gtDe quel instrument jouez vous?&lt/p&gt
-      &ltdiv id="r2"&gt
+      &ltdiv&gt
           &ltinput type="checkbox" name="basse" id="checkbox" value="basse"&gt
           &ltlabel for="basse"&gtSlappa da bass!&lt/label&gt
           &ltinput type="checkbox" name="guitare" id="guitare" value="guitare"&gt
@@ -725,7 +745,18 @@
         <section id="tableau">
             <h3> Le Tableau </h3>
             <p>
-                Ajoutez simplement la classe "table" a votre balise table, les effet sont décrit dans le tableau d'exemple suivant.
+                Ajoutez simplement la classe "table" a votre balise table, les effet sont décrit dans le tableau d'exemple suivant.<br>
+                <br>
+                Nous avons donc sur "table" un background gris très clair, un border-collapse en separate afin de séparer les cellules,<br>
+                Un box-shadow tout autour très léger afin de démarquer le tableau de la page, un margin auto afin de le centrer.<br>
+                Cette fois-ci le text-align est à gauche et la largeur total du tableau représente 80% de son conteneur (ici la page).<br>
+                <br>
+                Passons maintenant au head du tableau, nous avons un background linear-gradient anthracite et une police blanche en bold <br>
+                Un padding est appliqué a toutes les cellules afin d'améliorer la lisibilité, il est de 10px en haut et en bas et de 15px de chaque coté <br>
+
+                les cellules en td du body possèdent un border d'1px solid blanc.<br>
+                <br>
+                Enfin, le td:first-child de chaque ligne est en bold.
             </p>
             <table class="table">
                 <thead>
@@ -986,13 +1017,49 @@
                     <h4> Le Css </h4>
                     <code>
 /* -----------------------------------------------Reset User Agent */
-
-* {
-  margin: 0; /* Reintialise all margin*/
-  padding: 0; /* Reintialise all padding*/
-  list-style-type: none; /* Delete Bullet on list */
-  text-decoration: none; /* Delete Underline on Link */
-  box-sizing: border-box; /* Padding and Border include in box size */
+/*To remove any margin or border, reset font size & font style, reset the vertical alignment to its default value*/
+html, body, div, span, applet,
+p, blockquote,
+a, big, cite, code,
+em, img,
+small, strike, strong, tt,
+b, u, i,
+ol, ul, li,
+form, label, legend,
+table,
+article, aside, canvas,
+figure, figcaption, footer, header,
+menu, nav, output, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+	font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+            </code>
+                </div>
+                <div class="colnorm">
+                    <!--Nom de la class a voir avec Julien -->
+                    <h4> Le Css </h4>
+                    <code>
+/* hyphens & too long words go to next line */
+div, textarea, table, td, th, code, pre, samp {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+/*To remove bullets from bulleted lists*/
+ul, li {
+	list-style: none;
+}
+/*To remove underlining or any other effect on links*/
+a, a:target, a:visited, a:active {
+  text-decoration: none;
+  color: black;
 }
 
 img {
@@ -1092,6 +1159,9 @@ img {
   display:flex;
   justify-content:space-around;
 }
+.dflex-w {
+  flex-wrap: wrap;
+}
 
             </code>
                 </div>
@@ -1155,24 +1225,48 @@ img {
                 </div>
             </div>
         </section>
+        <section id="icons">
+          <h3> Les Icones </h3>
+          <p> Le Framework dispose d'une petite librairie d'icones que
+            vous pouvez utiliser pour votre Navigation, vos reseaux
+            sociaux, etc.</p>
+          <h5 class="centert">Integrer la librairie</h5><br/>
+          <p> - Une fois le framework télécharger, dézipper le.<br/>
+          - ajouter le dossier fontello dans votre projet web <br>
+        - linker la feuille de style fontello.css avec l'url suivante: fontello/css/fontello.css
+      sur toutes les pages necessitant des icones <br>
+    - </p>
+              <h5 class="centert">Utiliser la librairie d'icones</h5><br/>
+              <p>Ajouter la class de l'icone que vous souhaitez ajouter à votre élément <br/>
+                Vous pouvez gerer l'apparence de l'icone grace aux propriétés css relatives aux fonts
+                ex : font-size; font-weight; etc etc !
+                Amusez vous ! 
+              </p>
+          <div class="containflex">
+            <div class="colnorm">
+
+            </div>
+
+          </div>
+        </section>
     </aside>
     <footer class="bg">
         <div class="containflex">
-            <section id="Equipe">
+            <div class="colnorm">
                 <!-- A voir pr le contenu -->
                 <h3>Le mot de l'équipe : </h3>
                 <p>Hodor hodor HODOR! Hodor hodor, hodor. Hodor hodor - hodor. Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor hodor?! Hodor. Hodor hodor - hodor?! Hodor hodor HODOR! Hodor hodor; hodor hodor hodor hodor hodor! Hodor, hodor
                     - hodor... Hodor hodor hodor - hodor. Hodor. </p>
                 <p>Hodor hodor HODOR! Hodor HODOR hodor, hodor hodor hodor?! Hodor! Hodor hodor, hodor hodor hodor?! Hodor, hodor, hodor. Hodor hodor; hodor hodor. Hodor hodor HODOR! Hodor hodor - hodor?! Hodor! Hodor hodor, hodor hodor, hodor. Hodor hodor;
                     hodor hodor. </p>
-            </section>
-            <section>
+            </div>
+            <div class="colnorm">
                 <!-- A voir pr le contenu -->
                 <h3>ET la un petit géranium ?  </h3>
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                     aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </section>
-            <section id="contact">
+            </div>
+            <div class="colnorm">
                 <!-- A voir pr le contenu  -->
                 <h3>On reste en Contact ?  </h3>
                 <p> Une Envie ? Une Suggestion ?</p>
@@ -1182,7 +1276,8 @@ img {
                     <input class="input " type:email placeholder="votre email">
                     <input class="input" type:email placeholder="votre site web">
                 </form>
-        </div>
+            </div>
+          </div>
         <p> &copy 2016 Copyright Julien - Valentin - Ryhad - Elise - Laurene - Eleves de SIMPLonMars</p>
         <a href="#" id="gotop">
             <span class="icon-up-open" aria-hidden="true"></span>

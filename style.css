@@ -72,6 +72,10 @@ h1, h2, h3, h4 {
 .containbtn {
   text-align: center;
 }
+#btndowload{
+  width: auto;
+  padding: 8px 5px;
+}
 
 .grid [class*="w-"]{
   height: 100%;

@@ -42,6 +42,8 @@ img {
     max-width: 100%;
 }
 
+
+
 /* -----------------------------------------------Helper Class */
 
 
@@ -148,6 +150,10 @@ img {
   justify-content:space-around;
 }
 
+.dflex-w {
+  flex-wrap: wrap;
+}
+
 
 /*** Hide Elements ***/
 
@@ -235,7 +241,7 @@ code {
 .nav>ul li {
     flex: 1;
 }
-.nav li a {
+.nav li a  {
     height: 50px;
     line-height: 50px;
     color: #fff;
@@ -243,7 +249,7 @@ code {
     display: flex;
     justify-content: center;
 }
-.nav li:hover a {
+.nav li:hover a, .nav li:hover {
     background-color: #aaaaaa;
     color: black;
     transition: 0.2s;
@@ -265,7 +271,7 @@ code {
     display: none;
 }
 /*Permet affichage liens Toggle*/
-.nav>ul li a:hover+.hid_ul, .hid_ul:hover {
+.nav>ul li:hover .hid_ul, .hid_ul:hover,.nav>ul li:hover {
     display: block;
     padding: 0;
 }
@@ -752,15 +758,5 @@ code {
     }
     .nav>ul {
         display: none;
-    }
-    .nav .hid_ul {
-        display: block;
-    }
-    .nav .hid_ul li a{
-        font-size: 0.8em;
-        box-shadow: inset 0px 1px 0px grey;
-    }
-    .nav .hid_ul li:last-child{
-        border-bottom: 1px solid grey;
     }
 }
