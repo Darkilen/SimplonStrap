@@ -319,15 +319,15 @@
             <!-- Add Grid -->
 
             <p>Pour les amateurs de BootStrap et les vétérans d'Internet Explorer, nous avons également implémenté une grille de base 12 colonnes, n'utilisant aucun flex.<br>
-                classe du container: .grid<br>
-                Fonctionnement des dimensions des colonnes: w-dividende-diviseur, allant de 1 à 12<br>
+                classe du container: "grid"<br>
+                Fonctionnement des dimensions des colonnes: w-<i>dividende-diviseur</i>, allant de 1 à 12<br>
                 Exemples :</p>
-            <ul>
+            <ul class="gridlist">
               <li>une colonne de taille un douzième: "w-1-12" = "one-twelve"</li>
               <li>une colonne de taille un tier: "w-1-3" = "w-4-12" = "four-twelve"</li>
               <li>une colonne faisant la moitié de la taille de son parent: "w-1-2" = "w-2-4" = "w-3-6" = "w-6-12" = "six-twelve"</li>
-            </ul>
-            <p>Pour créer vos propres grilles, je vous propose d'utiliser le PGCD de leurs noms de classe. Par exemple, si vous souhaitez y mettre deux colonnes - disons un tier et deux tiers - vous pourriez leur ajouter les classes "w-1-3" et "w-2-3"; par contre, si vous souhaitez ajouter une colonne dont le PGCD est 12, mon conseil est d'utiliser uniquement les classes de largeur de colonnes terminant par 12 ("w-1-12", "w-2-12", ..., "w-12-12")</p>
+            </ul><br>
+            <p>Pour créer vos propres grilles, je vous propose d'utiliser la fraction la plus simplifiée de leurs noms de classe. Par exemple, si vous souhaitez y mettre deux colonnes - disons un tier et deux tiers - vous pourriez leur ajouter les classes "w-1-3" et "w-2-3"; par contre, si vous souhaitez ajouter une colonne dont le diviseur est 12, mon conseil est d'utiliser uniquement les classes de largeur de colonnes terminant par 12 ("w-1-12", "w-2-12", ..., "w-12-12")</p>
             <div style="border: 2px solid black;" class="grid h600p">
 
                 <div style="background-color: pink; padding: 16px;" class="w-1-2">
