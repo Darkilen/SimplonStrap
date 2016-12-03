@@ -49,12 +49,37 @@ img {
 
 /*** Positions ***/
 
-.porel {
+.relative, .porel, .rel {
     position: relative;
 }
 
-.poabs {
-    position: absolute;
+/*Position absolute - to place object in corners of its closest positioned ancestor- you can use .abs class and fill in value otherwise*/
+
+.abs, .poabs {
+  position: absolute;
+  top: ;
+  right: ;
+}
+
+.abstopright, .abstr, .poabsur {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.abstopleft, .abstl, .poabsul {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.absbottomright, .absbr, .poabsdr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.absbottomleft, .absbl, .poabsdl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .pofix {
@@ -75,48 +100,15 @@ img {
     bottom: 0;
 }
 
-.poabsdl {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.poabsdr {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.poabsul {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.poabsur {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
 
 /*** Display ***/
 
-.dblock {
+.dblock, .bl {
     display: block;
 }
 
-.dinblock {
+.dinblock, .inbl {
     display: inline-block;
-}
-
-.dflex {
-    display: flex;
-}
-
-.dflexcenter {
-    display: flex;
-    justify-content: center;
 }
 
 
@@ -153,7 +145,7 @@ img {
   justify-content:space-between;
 }
 
-.dflex-a {
+.dflexsp-a {
   display:flex;
   justify-content:space-around;
 }
@@ -196,7 +188,15 @@ img {
   margin-right: auto;
 }
 
-.centert {
+.textleft, .tl, .leftt {
+  text-align: right;;
+}
+
+.textright, .tr, .rightt {
+  text-align: left;
+}
+
+.textcenter, .tc, .centert {
   text-align:center;
 }
 
