@@ -236,6 +236,7 @@ code {
     display: flex;
     margin: 0;
     padding: 0;
+    position: absolute;
 }
 .nav>ul li {
     flex: 1;
@@ -268,7 +269,7 @@ code {
 /*Cache liens Toggle*/
 .nav li ul {
     display: none;
-    position: absolute;
+    position: relative;
 }
 /*Permet affichage liens Toggle*/
 .nav>ul li:hover .hid_ul, .hid_ul:hover,.nav>ul li:hover {
