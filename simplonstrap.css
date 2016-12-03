@@ -242,7 +242,6 @@ code {
     flex: 1;
 }
 .nav li a  {
-    height: 50px;
     line-height: 50px;
     color: #fff;
     background-color: #2f3036;
@@ -258,7 +257,6 @@ code {
 .nav li:hover ul a {
     background-color: #aaaaaa;
     color: #2f3036;
-    height: 50px;
     line-height: 50px;
 }
 /*Hover liens Toggle*/
@@ -756,6 +754,7 @@ code {
     }
     .show-menu {
         display: block;
+        width: 100%;
     }
     .nav>ul {
         display: none;
