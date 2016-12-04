@@ -252,9 +252,7 @@ code {
 /* -----------------------------------------------Navigation Bar */
 
 /* Navigation Bar*/
-.nav {
-    margin: 50px 0px;
-}
+
 .nav>ul {
     list-style-type: none;
     width: 100%;
