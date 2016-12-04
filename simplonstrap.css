@@ -222,7 +222,7 @@ code {
 
 /* Navigation Bar*/
 .nav {
-    width: 100%;
+    margin: 50px 0px;
 }
 .nav>ul {
     list-style-type: none;
@@ -711,7 +711,11 @@ code {
 
 
 /* -----------------------------------------------Media Queries */
-
+@media screen and (max-width: 1100px) {
+  .nav {
+    font-size: 1.5vw;
+  }
+}
 @media screen and (max-width: 800px) {
 
     /*------------------------------------------------Form*/
@@ -750,7 +754,9 @@ code {
         width: 100%;
     }
     /*------------------------------------------------Nav*/
-
+    .nav {
+      font-size: 1em;
+    }
     .nav ul li, .nav li a {
         width: 100%;
     }
