@@ -211,15 +211,15 @@ img {
 }
 
 .textleft, .tl, .leftt {
-  text-align: right;;
-}
-
-.textright, .tr, .rightt {
   text-align: left;
 }
 
+.textright, .tr, .rightt {
+  text-align: right;
+}
+
 .textcenter, .tc, .centert {
-  text-align:center;
+  text-align: center;
 }
 
 .textjustify, .tj {
