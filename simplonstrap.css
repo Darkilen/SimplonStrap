@@ -49,18 +49,35 @@ img {
 
 /*** Positions ***/
 
-.relative, .porel, .rel {
+.relative, .rel, .porel {
     position: relative;
 }
 
-/*Position absolute - to place object in corners of its closest positioned ancestor- you can use .abs class and fill in value otherwise*/
+.postat {
+    position: static;
+}
+
+/* Position absolute */
 
 .abs, .poabs {
   position: absolute;
-  top: ;
-  right: ;
 }
-
+.abstop, .abst {
+  position: absolute;
+  top: 0;
+}
+.absbottom, .absb {
+  position: absolute;
+  bottom: 0;
+}
+.absleft, .absl {
+  position: absolute;
+  left: 0;
+}
+.absright, .absr {
+  position: absolute;
+  right: 0;
+}
 .abstopright, .abstr, .poabsur {
   position: absolute;
   top: 0;
@@ -82,15 +99,27 @@ img {
   left: 0;
 }
 
-.postat {
-    position: static;
-}
+
 /* Fixed position - to place an object fixed in the viewport */
 
 .fix, .pofix {
   position: fixed;
-  top: ;
-  right: ;
+}
+.fixtop, .fixt {
+  position: fixed;
+  top: 0;
+}
+.fixbottom, .fixb {
+  position: fixed;
+  bottom: 0;
+}
+.fixleft, .fixl {
+  position: fixed;
+  left: 0;
+}
+.fixright, .fixr {
+  position: fixed;
+  right: 0;
 }
 .fixtopright, .fixtr {
   position: fixed;
