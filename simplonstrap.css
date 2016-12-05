@@ -426,13 +426,8 @@ code {
     display: block;
 }
 
-.clearnav {
-    padding-top: 50px;
-}
-
 @media screen and (max-width: 1000px) {
     .navi {
-        font-size: 2em;
         width: 100%;
     }
     .navi ul li, .nav li a {
