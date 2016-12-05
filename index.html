@@ -45,13 +45,13 @@
         <section id="download" class="centert">
             <h3> Téléchargement du Framework SimplonStrap </h3>
             <p>
-              Pour télécharger le Framework, cliquez sur le bouton ci-dessous.
+                Pour télécharger le Framework, cliquez sur le bouton ci-dessous.
             </p><br>
-            <a class="btn" id="btndowload"  href="simplonstrap.css" download="simplonstrap.css">Download SimplonStrap.css</a>
+            <a class="btn" id="btndowload" href="simplonstrap.css" download="simplonstrap.css">Download SimplonStrap.css</a>
             <br><br><br>
         </section>
         <section id="menu">
-            <h3> La Barre de Navigation </h3>
+            <h3> La Barre de Navigation Flex </h3>
             <nav class="nav" role="navigation">
                 <label for="show-menuDemo" class="show-menu">Menu ￬</label>
                 <input type="checkbox" id="show-menuDemo" role="button">
@@ -199,6 +199,195 @@
             </code>
                     </div>
                 </div>
+                <h3> La Barre de Navigation inline-block </h3>
+                <nav class="navi" role="navigation">
+                    <label for="show-menuDemo" class="show-menu">Menu ￬</label>
+                    <input type="checkbox" id="show-menuDemo" role="button">
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#download">Téléchargement</a></li>
+                        <li><a href="#menu">Navigation</a></li>
+                        <li><a href="#">Grille ￬</a>
+                            <ul>
+                                <li><a href="#flexgrid">Grille Flex</a></li>
+                                <li><a href="#noflexgrid">Grille sans Flex</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Tableau / Form ￬</a>
+                            <ul>
+                                <li><a href="#form">Formulaire</a></li>
+                                <li><a href="#tableau">Tableau</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Autres ￬</a>
+                            <ul>
+                                <li><a href="#buttons">Boutons</a></li>
+                                <li><a href="#reset">Reset</a></li>
+                                <li><a href="#helper">Helper Class</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contact">Contact</a></li>
+                        <label for="show-menuDemo" class="show-menu">Fermer ↑</label>
+                    </ul>
+                </nav>
+
+                <h5 class="centert">Sa construction </h5><br/>
+                <p>Cette fois c'est un container doté de la classe .navi pour l'adaptation à n'importe quel type de menu et non uniquement une barre de navigation <br/> On initialise ensuite une liste à puce avec la balise ul comprenant les divers éléments
+                    du menu <br/> On crée ensuite les différents liens du menu entre les balises li de la liste à puce <br/> Pas besoin de classes pour le sous-menu cette fois-ci.</p>
+                <h5 class="centert">Le responsive</h5><br/>
+                <p>L'adaptabilité du menu est geré par des media queries à definir en fonction de votre design personel<br/> - Sur Desktop : <br/>Le menu a une largeur de 70%(modifiez le selecteur .navi {width:} pour l'adapter a votre menu).
+                    <br/> - Sur Mobile : <br>L'affichage est en block sur un click de "Menu", les sous-menus sont affichés lors d'un clique avec un font-size inférieur et des bordures afin de bien les distinguer <br/>
+                </p>
+                <div class="containflex">
+                    <!--Nom de la class a voir avec Julien -->
+                    <div class="colnorm">
+                        <!--Nom de la class a voir avec Julien -->
+                        <h4> Le Html </h4>
+                        <code>
+&ltnav class="navi" role="navigation"&gt
+    &ltlabel for="show-menuDemo" class="show-menu"&gtMenu ￬&lt/label&gt
+    &ltinput type="checkbox" id="show-menuDemo" role="button"&gt
+    &ltul&gt
+        &ltli&gt&lta href="#"&gtAccueil&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#download"&gtTéléchargement&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#menu"&gtNavigation&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#"&gtGrille ￬&lt/a&gt
+            &ltul&gt
+                &ltli&gt&lta href="#flexgrid"&gtGrille Flex&lt/a&gt&lt/li&gt
+                &ltli&gt&lta href="#noflexgrid"&gtGrille sans Flex&lt/a&gt&lt/li&gt
+            &lt/ul&gt
+        &lt/li&gt
+        &ltli&gt
+            &lta href="#"&gtTableau / Form ￬&lt/a&gt
+            &ltul&gt
+                &ltli&gt&lta href="#form"&gtFormulaire&lt/a&gt&lt/li&gt
+                &ltli&gt&lta href="#tableau"&gtTableau&lt/a&gt&lt/li&gt
+            &lt/ul&gt
+        &lt/li&gt
+        &ltli&gt
+            &lta href="#"&gtAutres ￬&lt/a&gt
+            &ltul&gt
+                &ltli&gt&lta href="#buttons"&gtBoutons&lt/a&gt&lt/li&gt
+                &ltli&gt&lta href="#reset"&gtReset&lt/a&gt&lt/li&gt
+                &ltli&gt&lta href="#helper"&gtHelper Class&lt/a&gt&lt/li&gt
+            &lt/ul&gt
+        &lt/li&gt
+        &ltli&gt&lta href="#contact"&gtContact&lt/a&gt&lt/li&gt
+        &ltlabel for="show-menuDemo" class="show-menu"&gtFermer ↑&lt/label&gt
+    &lt/ul&gt
+&lt/nav&gt
+&ltdiv class="clearnav"&gt&lt/div&gt
+                </code>
+                    </div>
+                    <div class="colnorm">
+                        <!--Nom de la class a voir avec Julien -->
+                        <h4> Le Css </h4>
+                        <code>
+.navi {
+    font-size: 1em;
+    width: 1000px;
+}
+
+.navi ul {
+    list-style: none;
+    background-color: #2f3036;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navi li {
+    text-align: left;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.navi a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding-left: 15px;
+    transition: .3s;
+}
+
+.navi a:hover {
+    background-color: #aaaaaa;
+    color: black;
+}
+
+.navi li li {
+    font-size: .8em;
+}
+
+.navi>ul>li {
+    text-align: center;
+}
+
+.navi>ul>li>a {
+    padding-left: 0;
+}
+
+.navi li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+}
+
+.navi li:hover ul {
+    display: block;
+}
+
+.navi li:hover ul a {
+    background-color: #aaaaaa;
+    color: #2f3036;
+}
+
+.navi li:hover ul a:hover {
+    background-color: #e2575e;
+    transition: 0.3s;
+}
+
+.navi input[type=checkbox],.navi .show-menu {
+    display: none;
+}
+
+.navi .show-menu {
+    color: #fff;
+    background-color: #2f3036;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navi input[type=checkbox]:checked~ul:first-of-type {
+    display: block;
+}
+
+.clearnav {
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .navi {
+        font-size: 2em;
+        width: 100%;
+    }
+    .navi ul li, .nav li a {
+        width: 100%;
+    }
+    .navi .show-menu {
+        display: block;
+    }
+    .navi>ul {
+        display: none;
+    }
+}
+                </code>
+                    </div>
+                </div>
         </section>
         <hr></hr>
         <section id="flexgrid">
@@ -318,16 +507,15 @@
             <h3> La Grille sans Flex </h3>
             <!-- Add Grid -->
 
-            <p>Pour les amateurs de BootStrap et les vétérans d'Internet Explorer, nous avons également implémenté une grille de base 12 colonnes, n'utilisant aucun flex.<br>
-                classe du container: "grid"<br>
-                Fonctionnement des dimensions des colonnes: w-<i>dividende-diviseur</i>, allant de 1 à 12<br>
-                Exemples :</p>
+            <p>Pour les amateurs de BootStrap et les vétérans d'Internet Explorer, nous avons également implémenté une grille de base 12 colonnes, n'utilisant aucun flex.<br> classe du container: "grid"<br> Fonctionnement des dimensions des colonnes: w-<i>dividende-diviseur</i>,
+                allant de 1 à 12<br> Exemples :</p>
             <ul class="gridlist">
-              <li>une colonne de taille un douzième: "w-1-12" = "one-twelve"</li>
-              <li>une colonne de taille un tier: "w-1-3" = "w-4-12" = "four-twelve"</li>
-              <li>une colonne faisant la moitié de la taille de son parent: "w-1-2" = "w-2-4" = "w-3-6" = "w-6-12" = "six-twelve"</li>
+                <li>une colonne de taille un douzième: "w-1-12" = "one-twelve"</li>
+                <li>une colonne de taille un tier: "w-1-3" = "w-4-12" = "four-twelve"</li>
+                <li>une colonne faisant la moitié de la taille de son parent: "w-1-2" = "w-2-4" = "w-3-6" = "w-6-12" = "six-twelve"</li>
             </ul><br>
-            <p>Pour créer vos propres grilles, je vous propose d'utiliser la fraction la plus simplifiée de leurs noms de classe. Par exemple, si vous souhaitez y mettre deux colonnes - disons un tier et deux tiers - vous pourriez leur ajouter les classes "w-1-3" et "w-2-3"; par contre, si vous souhaitez ajouter une colonne dont le diviseur est 12, mon conseil est d'utiliser uniquement les classes de largeur de colonnes terminant par 12 ("w-1-12", "w-2-12", ..., "w-12-12")</p>
+            <p>Pour créer vos propres grilles, je vous propose d'utiliser la fraction la plus simplifiée de leurs noms de classe. Par exemple, si vous souhaitez y mettre deux colonnes - disons un tier et deux tiers - vous pourriez leur ajouter les classes
+                "w-1-3" et "w-2-3"; par contre, si vous souhaitez ajouter une colonne dont le diviseur est 12, mon conseil est d'utiliser uniquement les classes de largeur de colonnes terminant par 12 ("w-1-12", "w-2-12", ..., "w-12-12")</p>
             <div style="border: 2px solid black;" class="grid h600p">
 
                 <div style="background-color: pink; padding: 16px;" class="w-1-2">
@@ -337,8 +525,8 @@
                 </div>
 
                 <div style="background-color: grey; padding: 16px;" class="w-1-2">
-                  <div style="background-color: firebrick; border: 2px solid white;" class="w-1-3">1/3</div>
-                  <div style="background-color: firebrick; border: 2px solid white;" class="w-2-3">2/3</div>
+                    <div style="background-color: firebrick; border: 2px solid white;" class="w-1-3">1/3</div>
+                    <div style="background-color: firebrick; border: 2px solid white;" class="w-2-3">2/3</div>
                 </div>
 
             </div>
@@ -777,17 +965,10 @@ Media queries form----->
             <h3> Le Tableau </h3>
             <p>
                 Ajoutez simplement la classe "table" a votre balise table, les effet sont décrit dans le tableau d'exemple suivant.<br>
-                <br>
-                Nous avons donc sur "table" un background gris très clair, un border-collapse en separate afin de séparer les cellules,<br>
-                Un box-shadow tout autour très léger afin de démarquer le tableau de la page, un margin auto afin de le centrer.<br>
-                Cette fois-ci le text-align est à gauche et la largeur total du tableau représente 80% de son conteneur (ici la page).<br>
-                <br>
-                Passons maintenant au head du tableau, nous avons un background linear-gradient anthracite et une police blanche en bold <br>
-                Un padding est appliqué a toutes les cellules afin d'améliorer la lisibilité, il est de 10px en haut et en bas et de 15px de chaque coté <br>
-
-                les cellules en td du body possèdent un border d'1px solid blanc.<br>
-                <br>
-                Enfin, le td:first-child de chaque ligne est en bold.
+                <br> Nous avons donc sur "table" un background gris très clair, un border-collapse en separate afin de séparer les cellules,<br> Un box-shadow tout autour très léger afin de démarquer le tableau de la page, un margin auto afin de le centrer.<br>                Cette fois-ci le text-align est à gauche et la largeur total du tableau représente 80% de son conteneur (ici la page).<br>
+                <br> Passons maintenant au head du tableau, nous avons un background linear-gradient anthracite et une police blanche en bold <br> Un padding est appliqué a toutes les cellules afin d'améliorer la lisibilité, il est de 10px en haut et
+                en bas et de 15px de chaque coté <br> les cellules en td du body possèdent un border d'1px solid blanc.<br>
+                <br> Enfin, le td:first-child de chaque ligne est en bold.
             </p>
             <table class="table">
                 <thead>
@@ -1257,28 +1438,20 @@ img {
             </div>
         </section>
         <section id="icons">
-          <h3> Les Icones </h3>
-          <p> Le Framework dispose d'une petite librairie d'icones que
-            vous pouvez utiliser pour votre Navigation, vos reseaux
-            sociaux, etc.</p>
-          <h5 class="centert">Integrer la librairie</h5><br/>
-          <p> - Une fois le framework télécharger, dézipper le.<br/>
-          - ajouter le dossier fontello dans votre projet web <br>
-        - linker la feuille de style fontello.css avec l'url suivante: fontello/css/fontello.css
-      sur toutes les pages necessitant des icones <br>
-    - </p>
-              <h5 class="centert">Utiliser la librairie d'icones</h5><br/>
-              <p>Ajouter la class de l'icone que vous souhaitez ajouter à votre élément <br/>
-                Vous pouvez gerer l'apparence de l'icone grace aux propriétés css relatives aux fonts
-                ex : font-size; font-weight; etc etc !
-                Amusez vous !
-              </p>
-          <div class="containflex">
-            <div class="colnorm">
+            <h3> Les Icones </h3>
+            <p> Le Framework dispose d'une petite librairie d'icones que vous pouvez utiliser pour votre Navigation, vos reseaux sociaux, etc.</p>
+            <h5 class="centert">Integrer la librairie</h5><br/>
+            <p> - Une fois le framework télécharger, dézipper le.<br/> - ajouter le dossier fontello dans votre projet web <br> - linker la feuille de style fontello.css avec l'url suivante: fontello/css/fontello.css sur toutes les pages necessitant des icones
+                <br> - </p>
+            <h5 class="centert">Utiliser la librairie d'icones</h5><br/>
+            <p>Ajouter la class de l'icone que vous souhaitez ajouter à votre élément <br/> Vous pouvez gerer l'apparence de l'icone grace aux propriétés css relatives aux fonts ex : font-size; font-weight; etc etc ! Amusez vous !
+            </p>
+            <div class="containflex">
+                <div class="colnorm">
+
+                </div>
 
             </div>
-
-          </div>
         </section>
     </aside>
     <footer class="bg">
@@ -1308,7 +1481,7 @@ img {
                     <input class="input" type:email placeholder="votre site web">
                 </form>
             </div>
-          </div>
+        </div>
         <p> &copy 2016 Copyright Julien - Valentin - Ryhad - Elise - Laurene - Eleves de SIMPLonMars</p>
         <a href="#" id="gotop">
             <span class="icon-up-open" aria-hidden="true"></span>
