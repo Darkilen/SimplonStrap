@@ -280,7 +280,7 @@ code {
 
 /* -----------------------------------------------Navigation Bar */
 
-/* Navigation Bar*/
+/* Navigation Bar Flex*/
 
 .nav>ul {
     list-style-type: none;
@@ -342,6 +342,102 @@ code {
 
 .clearnav{
   padding-top: 50px;
+}
+
+/* Navigation Bar inline-block*/
+.navi {
+    font-size: 1em;
+}
+
+.navi ul {
+    list-style: none;
+    background-color: #2f3036;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navi li {
+    text-align: left;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.navi a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding-left: 15px;
+    transition: .3s;
+}
+
+.navi a:hover {
+    background-color: #aaaaaa;
+    color: black;
+}
+
+.navi li li {
+    font-size: .8em;
+}
+
+.navi>ul>li {
+    text-align: center;
+}
+
+.navi>ul>li>a {
+    padding-left: 0;
+}
+
+.navi li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+}
+
+.navi li:hover ul {
+    display: block;
+}
+
+.navi li:hover ul a {
+    background-color: #aaaaaa;
+    color: #2f3036;
+}
+
+.navi li:hover ul a:hover {
+    background-color: #e2575e;
+    transition: 0.3s;
+}
+
+.navi input[type=checkbox],.navi .show-menu {
+    display: none;
+}
+
+.navi .show-menu {
+    color: #fff;
+    background-color: #2f3036;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navi input[type=checkbox]:checked~ul:first-of-type {
+    display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    .navi {
+        width: 100%;
+    }
+    .navi ul li, .nav li a {
+        width: 100%;
+    }
+    .navi .show-menu {
+        display: block;
+    }
+    .navi>ul {
+        display: none;
+    }
 }
 /* -----------------------------------------------Grid */
 
@@ -749,7 +845,6 @@ code {
     /*------------------------------------------------Form*/
     .form {
         margin: 0;
-        width: 100%;
         border-radius: 0px;
     }
     .form label {
